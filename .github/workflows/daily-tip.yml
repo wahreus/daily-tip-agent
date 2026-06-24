@@ -1,0 +1,54 @@
+name: Daily Well-Architected Tip
+
+on:
+  schedule:
+    # Runs every day at 06:00 UTC.
+    - cron: "0 6 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update-readme:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Check vector index exists
+        run: |
+          if [ ! -f storage/well_architected_index.sqlite ]; then
+            echo "Missing storage/well_architected_index.sqlite"
+            echo "Commit the SQLite vector index before running the agent."
+            exit 1
+          fi
+
+      - name: Generate daily tip and update README
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+        run: python -m src.update_readme
+
+      - name: Commit changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+          git add README.md tips
+
+          if git diff --cached --quiet; then
+            echo "No changes to commit."
+            exit 0
+          fi
+
+          git commit -m "Update daily Well-Architected tip"
+          git push
