@@ -6,13 +6,13 @@ The project uses Retrieval-Augmented Generation (RAG) over a committed SQLite ve
 
 <!-- TIP_OF_THE_DAY_START -->
 
-## Tip of the day [Thursday, June 25, 2026]
+## Tip of the day [Friday, June 26, 2026]
 
-### Replace self-managed components with AWS managed services
+### Scale to the shape of demand
 
-Review your workload for components that can be shifted from self-managed infrastructure to AWS managed services such as Amazon RDS, Redshift, ElastiCache, Athena, EMR, OpenSearch Service, or AWS Fargate. Managed services run at cloud scale and help AWS optimize hardware utilization more efficiently than isolated, low-utilization instances. They also reduce the operational burden of patching, upgrades, and routine administration, which frees your team to focus on simplification and innovation. For sustainability, prioritize replacements that consolidate spread-out compute or storage onto shared managed platforms, especially where your current setup has idle capacity. Start with an inventory of workload components, then identify the ones that are easiest to retire or refactor into managed offerings without changing the core business function.
+Treat capacity as something that should follow workload patterns, not a fixed number you set once. Use demand-based scaling for unpredictable spikes and time-based scaling for traffic you can forecast, so you can add capacity quickly when needed and remove it when demand drops. If your application has bursts, place a queue or buffer in front of the work to smooth short-lived peaks and avoid overprovisioning. Make sure your scaling policy considers how long it takes to provision new resources and tests the workload’s ability to recover from failures as capacity changes. After a scaling event, verify that excess capacity is removed promptly so you do not keep paying for resources you no longer need.
 
-**Why it matters:** Higher utilization and shared operation mean less infrastructure is needed to deliver the same workload, which lowers resource consumption. It also reduces ongoing maintenance work, making it easier to keep optimizing the environment over time instead of letting waste accumulate.
+**Why it matters:** Matching supply to demand reduces waste while protecting performance during spikes. It also lowers the risk of manual scaling mistakes and keeps your architecture elastic enough to respond to real usage patterns.
 
 <!-- TIP_OF_THE_DAY_END -->
 
