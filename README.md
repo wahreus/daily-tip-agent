@@ -6,13 +6,13 @@ The project uses Retrieval-Augmented Generation (RAG) over a committed SQLite ve
 
 <!-- TIP_OF_THE_DAY_START -->
 
-## Tip of the day [Friday, June 26, 2026]
+## Tip of the day [Saturday, June 27, 2026]
 
-### Scale to the shape of demand
+### Build escalation paths that trigger the right responders fast
 
-Treat capacity as something that should follow workload patterns, not a fixed number you set once. Use demand-based scaling for unpredictable spikes and time-based scaling for traffic you can forecast, so you can add capacity quickly when needed and remove it when demand drops. If your application has bursts, place a queue or buffer in front of the work to smooth short-lived peaks and avoid overprovisioning. Make sure your scaling policy considers how long it takes to provision new resources and tests the workload’s ability to recover from failures as capacity changes. After a scaling event, verify that excess capacity is removed promptly so you do not keep paying for resources you no longer need.
+For event response, define clear escalation paths before an incident happens so alarms can route directly to the right on-call people or contacts. Use CloudWatch alarms or EventBridge events to create incidents in AWS Systems Manager Incident Manager, then map those incidents to escalation plans and on-call schedules. Make sure each escalation path states when to escalate, who owns each step, and what actions are pre-approved to avoid delays during high-severity events. Pair this with runbooks so responders have immediate, consistent next steps instead of inventing a process under pressure. Keep permissions and tools ready for the people in the schedule so they can act without waiting for access changes.
 
-**Why it matters:** Matching supply to demand reduces waste while protecting performance during spikes. It also lowers the risk of manual scaling mistakes and keeps your architecture elastic enough to respond to real usage patterns.
+**Why it matters:** Clear escalation reduces time to engage the right team and shortens mean time to resolution. It also prevents confusion during outages by removing guesswork about ownership, communication, and response actions.
 
 <!-- TIP_OF_THE_DAY_END -->
 
