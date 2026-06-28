@@ -6,13 +6,13 @@ The project uses Retrieval-Augmented Generation (RAG) over a committed SQLite ve
 
 <!-- TIP_OF_THE_DAY_START -->
 
-## Tip of the day [Saturday, June 27, 2026]
+## Tip of the day [Sunday, June 28, 2026]
 
-### Build escalation paths that trigger the right responders fast
+### Standardize cost allocation tags early
 
-For event response, define clear escalation paths before an incident happens so alarms can route directly to the right on-call people or contacts. Use CloudWatch alarms or EventBridge events to create incidents in AWS Systems Manager Incident Manager, then map those incidents to escalation plans and on-call schedules. Make sure each escalation path states when to escalate, who owns each step, and what actions are pre-approved to avoid delays during high-severity events. Pair this with runbooks so responders have immediate, consistent next steps instead of inventing a process under pressure. Keep permissions and tools ready for the people in the schedule so they can act without waiting for access changes.
+Define a small, organization-wide tagging schema for cost allocation categories such as cost center, application, owner, team, and environment, and require those tags on every billable resource. Keep tag keys and allowed values consistent across accounts so your cost and usage data can be grouped reliably for reporting and chargeback. Use AWS Tag Policies in AWS Organizations to enforce the standard, and automate tag assignment at provisioning time so new resources do not slip through untagged. Review both tagged and untagged resources regularly, because incomplete tagging weakens cost attribution and makes spend accountability harder. If a resource cannot be tagged directly, map it into AWS Cost Categories so the spend still rolls up to the right internal entity.
 
-**Why it matters:** Clear escalation reduces time to engage the right team and shortens mean time to resolution. It also prevents confusion during outages by removing guesswork about ownership, communication, and response actions.
+**Why it matters:** Consistent cost allocation tags turn raw cloud spend into actionable financial and operational data. They help teams understand who is consuming what, improve budget ownership, and reduce waste from unmanaged or untracked resources.
 
 <!-- TIP_OF_THE_DAY_END -->
 
