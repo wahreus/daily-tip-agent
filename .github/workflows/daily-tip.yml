@@ -2,8 +2,8 @@ name: Daily Well-Architected Tip
 
 on:
   schedule:
-    # Runs every day at 03:27 UTC.
-    - cron: "27 3 * * *"
+    # Runs every day at 01:27 UTC.
+    - cron: "27 1 * * *"
   workflow_dispatch:
 
 permissions:
