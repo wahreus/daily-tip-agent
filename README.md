@@ -6,13 +6,13 @@ The project uses Retrieval-Augmented Generation (RAG) over a committed SQLite ve
 
 <!-- TIP_OF_THE_DAY_START -->
 
-## Tip of the day [Sunday, June 28, 2026]
+## Tip of the day [Mon, June 29, 2026]
 
-### Standardize cost allocation tags early
+### Prefer asynchronous contracts for non-blocking dependencies
 
-Define a small, organization-wide tagging schema for cost allocation categories such as cost center, application, owner, team, and environment, and require those tags on every billable resource. Keep tag keys and allowed values consistent across accounts so your cost and usage data can be grouped reliably for reporting and chargeback. Use AWS Tag Policies in AWS Organizations to enforce the standard, and automate tag assignment at provisioning time so new resources do not slip through untagged. Review both tagged and untagged resources regularly, because incomplete tagging weakens cost attribution and makes spend accountability harder. If a resource cannot be tagged directly, map it into AWS Cost Categories so the spend still rolls up to the right internal entity.
+When two services do not need an immediate response, switch from direct point-to-point calls to asynchronous messaging. Use events, queues, or topics so the producer only needs to know that the request was accepted, not how or when it will be processed. Keep interfaces versioned and published so consumers depend on a stable contract instead of an implementation detail. Avoid sharing databases between services, because that can quietly reintroduce tight coupling and make scaling or failure isolation harder. If a downstream component can’t keep up, apply back pressure, throttle intake, or fail fast rather than letting queues grow without control.
 
-**Why it matters:** Consistent cost allocation tags turn raw cloud spend into actionable financial and operational data. They help teams understand who is consuming what, improve budget ownership, and reduce waste from unmanaged or untracked resources.
+**Why it matters:** Loose coupling reduces the blast radius of failures and lets teams change, deploy, and scale services independently. It also improves resilience because one component can degrade or fail without taking down the whole workflow.
 
 <!-- TIP_OF_THE_DAY_END -->
 
