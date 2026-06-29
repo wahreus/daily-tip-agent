@@ -6,13 +6,13 @@ The project uses Retrieval-Augmented Generation (RAG) over a committed SQLite ve
 
 <!-- TIP_OF_THE_DAY_START -->
 
-## Tip of the day [Wednesday, June 24, 2026]
+## Tip of the day [Sunday, June 28, 2026]
 
-### Centralize and enrich security signals
+### Standardize cost allocation tags early
 
-Make sure your service, application, and cloud control-plane logs are captured in standardized locations so investigators can reliably search them later. Feed key findings and metrics into a common security pipeline rather than leaving them scattered across teams and accounts. Correlate related alerts and enrich them with context such as resource ownership, configuration state, and recent API activity before escalating. This reduces manual triage and helps your team distinguish a real incident from routine noise. When possible, automate the first response for common, repetitive events so analysts can focus on unusual or high-impact cases.
+Define a small, organization-wide tagging schema for cost allocation categories such as cost center, application, owner, team, and environment, and require those tags on every billable resource. Keep tag keys and allowed values consistent across accounts so your cost and usage data can be grouped reliably for reporting and chargeback. Use AWS Tag Policies in AWS Organizations to enforce the standard, and automate tag assignment at provisioning time so new resources do not slip through untagged. Review both tagged and untagged resources regularly, because incomplete tagging weakens cost attribution and makes spend accountability harder. If a resource cannot be tagged directly, map it into AWS Cost Categories so the spend still rolls up to the right internal entity.
 
-**Why it matters:** Good detection is not just about collecting logs; it is about turning them into actionable signals quickly. Centralization, correlation, and enrichment shorten investigation time and improve severity assessment, which helps you respond before a security event grows into an incident.
+**Why it matters:** Consistent cost allocation tags turn raw cloud spend into actionable financial and operational data. They help teams understand who is consuming what, improve budget ownership, and reduce waste from unmanaged or untracked resources.
 
 <!-- TIP_OF_THE_DAY_END -->
 
