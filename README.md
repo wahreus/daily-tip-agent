@@ -6,13 +6,13 @@ The project uses Retrieval-Augmented Generation (RAG) over a committed SQLite ve
 
 <!-- TIP_OF_THE_DAY_START -->
 
-## Tip of the day [Mon, June 29, 2026]
+## Tip of the day [Tue, June 30, 2026]
 
-### Prefer asynchronous contracts for non-blocking dependencies
+### Prefer short-lived access over stored keys
 
-When two services do not need an immediate response, switch from direct point-to-point calls to asynchronous messaging. Use events, queues, or topics so the producer only needs to know that the request was accepted, not how or when it will be processed. Keep interfaces versioned and published so consumers depend on a stable contract instead of an implementation detail. Avoid sharing databases between services, because that can quietly reintroduce tight coupling and make scaling or failure isolation harder. If a downstream component can’t keep up, apply back pressure, throttle intake, or fail fast rather than letting queues grow without control.
+Use temporary credentials for both human and machine access to AWS whenever possible, and reserve long-term access keys only for the rare cases that truly require them. For workforce users, route access through a centralized identity provider and federation or AWS IAM Identity Center so users assume roles instead of receiving permanent keys. For workloads and automation, replace hard-coded or shared access keys with IAM roles so the credentials are short-lived and automatically rotated by AWS. This reduces the chance of secrets being leaked, reused, or left behind when people or systems change. If you still have any long-term credentials in use, treat them as a migration target and remove them as soon as a role-based or federated option is available.
 
-**Why it matters:** Loose coupling reduces the blast radius of failures and lets teams change, deploy, and scale services independently. It also improves resilience because one component can degrade or fail without taking down the whole workflow.
+**Why it matters:** Short-lived credentials dramatically reduce the blast radius of exposure because they expire quickly and are harder to abuse if discovered. They also simplify credential management by eliminating most manual storage, sharing, and rotation tasks that commonly lead to operational and security issues.
 
 <!-- TIP_OF_THE_DAY_END -->
 
