@@ -6,13 +6,13 @@ The project uses Retrieval-Augmented Generation (RAG) over a committed SQLite ve
 
 <!-- TIP_OF_THE_DAY_START -->
 
-## Tip of the day [Tue, June 30, 2026]
+## Tip of the day [Wednesday, July 1, 2026]
 
-### Prefer short-lived access over stored keys
+### Automate quota monitoring before growth becomes an outage
 
-Use temporary credentials for both human and machine access to AWS whenever possible, and reserve long-term access keys only for the rare cases that truly require them. For workforce users, route access through a centralized identity provider and federation or AWS IAM Identity Center so users assume roles instead of receiving permanent keys. For workloads and automation, replace hard-coded or shared access keys with IAM roles so the credentials are short-lived and automatically rotated by AWS. This reduces the chance of secrets being leaked, reused, or left behind when people or systems change. If you still have any long-term credentials in use, treat them as a migration target and remove them as soon as a role-based or federated option is available.
+Treat service quotas like any other operational dependency: continuously monitor usage, alert when you approach thresholds, and have a documented path for requesting increases. Use AWS Service Quotas, Trusted Advisor, or your own automation to track limits across accounts and Regions instead of relying on spreadsheets or occasional manual checks. Set alerts early enough that soft quota increases can be approved before traffic growth hits the limit, and remember that some requests may take time to process. Where the workload is business-critical, you can automate quota increase requests, but test that automation carefully to avoid runaway feedback loops. Also review hard limits and service-specific constraints so you don’t assume every quota can be raised.
 
-**Why it matters:** Short-lived credentials dramatically reduce the blast radius of exposure because they expire quickly and are harder to abuse if discovered. They also simplify credential management by eliminating most manual storage, sharing, and rotation tasks that commonly lead to operational and security issues.
+**Why it matters:** Quota exhaustion can cause throttling, failed deployments, or even a production outage when demand spikes. Proactive monitoring and controlled automation help keep workloads stable and resilient as they grow.
 
 <!-- TIP_OF_THE_DAY_END -->
 
