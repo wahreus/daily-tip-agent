@@ -6,13 +6,13 @@ The project uses Retrieval-Augmented Generation (RAG) over a committed SQLite ve
 
 <!-- TIP_OF_THE_DAY_START -->
 
-## Tip of the day [Wednesday, July 1, 2026]
+## Tip of the day [Thu, July 2, 2026]
 
-### Automate quota monitoring before growth becomes an outage
+### Make sustainability reviews a recurring engineering habit
 
-Treat service quotas like any other operational dependency: continuously monitor usage, alert when you approach thresholds, and have a documented path for requesting increases. Use AWS Service Quotas, Trusted Advisor, or your own automation to track limits across accounts and Regions instead of relying on spreadsheets or occasional manual checks. Set alerts early enough that soft quota increases can be approved before traffic growth hits the limit, and remember that some requests may take time to process. Where the workload is business-critical, you can automate quota increase requests, but test that automation carefully to avoid runaway feedback loops. Also review hard limits and service-specific constraints so you don’t assume every quota can be raised.
+Treat sustainability improvement reviews as a regular cadence, not a one-time design activity. Set up a process and schedule to evaluate new features, instance types, and architecture changes that could reduce resource usage or improve measurement. Before promoting changes to production, test them with low-cost methods and validate that the expected efficiency gains are real. Keep an inventory of the workload components that need updates so you can spot stale areas that block small improvements. If your release process makes minor efficiency changes hard to ship, simplify it so sustainability improvements can land continuously.  
 
-**Why it matters:** Quota exhaustion can cause throttling, failed deployments, or even a production outage when demand spikes. Proactive monitoring and controlled automation help keep workloads stable and resilient as they grow.
+**Why it matters:** Regular reviews help you keep pace with cloud features that can lower energy use and improve efficiency. They also prevent workloads from going stale, where small but valuable sustainability gains are missed because no process exists to adopt them.
 
 <!-- TIP_OF_THE_DAY_END -->
 
