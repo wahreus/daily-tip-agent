@@ -6,13 +6,13 @@ The project uses Retrieval-Augmented Generation (RAG) over a committed SQLite ve
 
 <!-- TIP_OF_THE_DAY_START -->
 
-## Tip of the day [Saturday, July 4, 2026]
+## Tip of the day [Sunday, July 5, 2026]
 
-### Prefer encrypt-by-default with tight KMS key scoping
+### Define ownership and escalation before the alert fires
 
-For encryption at rest, make encryption the default in every storage service you use rather than treating it as an optional add-on. Enable server-side encryption for services like S3, and turn on encryption when creating resources such as EBS volumes, EFS file systems, and RDS databases so new data is protected automatically. Use AWS KMS to manage key material and keep the key in the same account as the workload when possible, which makes ownership and permissions clearer. Avoid reusing one key for all datasets; instead, map keys to data classifications so sensitive and less-sensitive data do not share the same decryption path. Also remember that some services inherit encryption for related artifacts, like RDS backups, which reduces the chance of accidentally leaving copies unprotected.
+For event response, make sure every actionable alert maps to a specific owner, a runbook or playbook, and a clear escalation path. Use on-call schedules and escalation plans so CloudWatch or other alerts can route incidents to the right responders immediately, instead of relying on ad hoc triage. Prioritize response based on business and customer impact, and pre-identify who has the authority to approve decisions when an incident could affect service or risk. Keep runbooks for well-understood events and playbooks for investigation and resolution so responders can act consistently under pressure. This reduces confusion, speeds up response, and helps ensure that important events do not get lost in alert noise.
 
-**Why it matters:** Encryption at rest is a core control against unintended disclosure if storage is misconfigured or accessed improperly. Tight key scoping and encrypt-by-default settings also reduce operational risk by making protection consistent across deployments, backups, and replication.
+**Why it matters:** Clear ownership and escalation cut mean time to investigate and resolve incidents, which improves reliability during both planned and unplanned events. They also make responses more uniform and scalable, so the team can handle incidents without scrambling for the right people or decisions.
 
 <!-- TIP_OF_THE_DAY_END -->
 
