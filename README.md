@@ -6,13 +6,13 @@ The project uses Retrieval-Augmented Generation (RAG) over a committed SQLite ve
 
 <!-- TIP_OF_THE_DAY_START -->
 
-## Tip of the day [Sunday, July 5, 2026]
+## Tip of the day [Monday, July 6, 2026]
 
-### Define ownership and escalation before the alert fires
+### Make runbooks short, validated, and easy to automate
 
-For event response, make sure every actionable alert maps to a specific owner, a runbook or playbook, and a clear escalation path. Use on-call schedules and escalation plans so CloudWatch or other alerts can route incidents to the right responders immediately, instead of relying on ad hoc triage. Prioritize response based on business and customer impact, and pre-identify who has the authority to approve decisions when an incident could affect service or risk. Keep runbooks for well-understood events and playbooks for investigation and resolution so responders can act consistently under pressure. This reduces confusion, speeds up response, and helps ensure that important events do not get lost in alert noise.
+For common operations, write runbooks as clear step-by-step procedures with the desired outcome stated up front. Include any required permissions, tools, error handling, and escalation paths so an engineer can complete the task without guessing. Publish runbooks in a central location and assign an owner so they stay discoverable and maintained. Before relying on a runbook, have someone else on the team execute it to catch missing steps or unclear instructions. As the same operation becomes routine, convert the runbook into automation for the most frequent and low-risk tasks.
 
-**Why it matters:** Clear ownership and escalation cut mean time to investigate and resolve incidents, which improves reliability during both planned and unplanned events. They also make responses more uniform and scalable, so the team can handle incidents without scrambling for the right people or decisions.
+**Why it matters:** Well-written runbooks reduce operational risk by making routine work repeatable and consistent, even when the person performing it changes. Validation and ongoing updates help prevent drift, while automation lowers manual effort and frees engineers to focus on higher-value work.
 
 <!-- TIP_OF_THE_DAY_END -->
 
