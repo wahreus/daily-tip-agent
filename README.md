@@ -6,13 +6,13 @@ The project uses Retrieval-Augmented Generation (RAG) over a committed SQLite ve
 
 <!-- TIP_OF_THE_DAY_START -->
 
-## Tip of the day [Saturday, July 18, 2026]
+## Tip of the day [Sunday, July 19, 2026]
 
-### Match the compute form to the workload
+### Automate retention, tiering, and deletion
 
-Choose the compute model that best fits the workload’s behavior instead of forcing every service onto the same platform. AWS offers instances, containers, and functions, and each one is optimized for different levels of control, elasticity, and operational effort. For example, use functions for event-driven code, containers when you want portability and orchestration, and instances when you need direct control or specialized hardware. Avoid over-provisioning for peak demand by evaluating workload characteristics, instance families, and available configuration features before you commit. Revisit the choice regularly, because rightsizing and newer instance types can improve both performance efficiency and cost.
+Treat data lifecycle management as an automated policy problem, not a manual cleanup task. Start by classifying data by sensitivity, access frequency, and how long it must be retained. Then define lifecycle rules that move older or infrequently accessed data to more efficient storage tiers and delete data when its retention window ends. Make sure those rules align with legal, regulatory, and organizational requirements, and cover both active data and backups. Finally, monitor for resources that do not have automated lifecycle management enabled so you can catch gaps before they become cost, compliance, or security issues.
 
-**Why it matters:** The wrong compute choice can leave you with underused resources, higher spend, or poor performance. Aligning compute with demand patterns and requirements helps you scale efficiently while keeping operations simpler and more predictable.
+**Why it matters:** Well-defined lifecycle policies improve storage efficiency, help maintain compliance, and reduce the risk of retaining data longer than necessary. They also lower operational overhead by replacing manual deletion and ad hoc storage management with repeatable automation.
 
 <!-- TIP_OF_THE_DAY_END -->
 
