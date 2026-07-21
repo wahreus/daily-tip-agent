@@ -6,13 +6,13 @@ The project uses Retrieval-Augmented Generation (RAG) over a committed SQLite ve
 
 <!-- TIP_OF_THE_DAY_START -->
 
-## Tip of the day [Monday, July 20, 2026]
+## Tip of the day [Tuesday, July 21, 2026]
 
-### Measure sustainability per unit of work
+### Lock down backups like production data
 
-Track sustainability metrics alongside workload performance so you can compare productive output with total resource impact. Use CloudWatch and related telemetry to identify the metrics that best represent utilization, such as CPU, memory, disk I/O, and network activity, then tie them to business output like requests served, jobs completed, or reports generated. This helps you establish KPIs such as energy or emissions per transaction rather than relying on raw infrastructure totals. Set clear accounting boundaries and include the full workload lifecycle where possible, so the numbers reflect what your team actually controls. Review the metrics regularly and use them to right-size resources, reduce idle capacity, and prioritize optimizations that lower environmental impact without hurting service quality.
+Treat backups as sensitive systems, not just copies of data. Encrypt backup data at rest and in transit, and make sure the backup environment uses separate access controls from production. Use least-privilege permissions so only the right operators and automation can create, read, or restore backups. Add immutability or logically isolated vaulting for critical backups to reduce the risk of deletion or tampering. Finally, test restores regularly to verify that backups are intact and actually recoverable when you need them.
 
-**Why it matters:** Sustainability improves fastest when it is measured in terms of useful work, not just infrastructure size. A consistent metric model gives DevOps teams a practical way to spot waste, justify optimization work, and show progress toward carbon and resource goals.
+**Why it matters:** Backups are a common target during ransomware and insider attacks, so protecting them is essential to preserving recovery options. Strong access controls, encryption, and restore validation help ensure your backup strategy delivers real resilience instead of a false sense of security.
 
 <!-- TIP_OF_THE_DAY_END -->
 
