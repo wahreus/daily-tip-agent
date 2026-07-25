@@ -6,13 +6,13 @@ The project uses Retrieval-Augmented Generation (RAG) over a committed SQLite ve
 
 <!-- TIP_OF_THE_DAY_START -->
 
-## Tip of the day [Friday, July 24, 2026]
+## Tip of the day [Saturday, July 25, 2026]
 
-### Centralize workforce access through your identity provider
+### Rightsize and schedule away idle capacity
 
-Use a centralized identity provider or AWS IAM Identity Center as the source of truth for workforce access, and federate users into AWS instead of creating standalone IAM users for day-to-day operations. Tie access changes to the employee lifecycle so role changes, transfers, and offboarding automatically update group membership and permissions. Enforce MFA for the root user and for sign-in paths managed through your identity provider. Remove unused IAM users, groups, and long-lived credentials, and consider using an SCP to prevent new IAM users from being created. For non-human identities, map each application or component to a specific role with permissions scoped to only what it needs.
+Start by inventorying your AWS resources and monitoring utilization for key signals like CPU, memory, and network throughput. Use AWS Compute Optimizer or similar rightsizing tools at regular intervals to spot idle or underutilized components, especially in stable workloads. For resources that do not need to run continuously, use scheduled stop/start patterns with AWS Instance Scheduler or equivalent automation to avoid paying for unused hours. Where possible, pair this with Auto Scaling so capacity follows demand instead of staying provisioned for peak load. Finally, remove components that are no longer needed and consider consolidating low-use resources to improve overall utilization.  
 
-**Why it matters:** Centralized identity management reduces credential sprawl and makes access changes faster and more consistent across accounts. It also strengthens security by supporting least privilege, lifecycle-based access control, and easier removal of stale credentials.
+**Why it matters:** Idle resources quietly inflate cloud spend without adding value. Reducing them lowers cost while also simplifying operations and making your environment easier to manage.
 
 <!-- TIP_OF_THE_DAY_END -->
 
