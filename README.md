@@ -6,13 +6,13 @@ The project uses Retrieval-Augmented Generation (RAG) over a committed SQLite ve
 
 <!-- TIP_OF_THE_DAY_START -->
 
-## Tip of the day [Saturday, July 25, 2026]
+## Tip of the day [Sunday, July 26, 2026]
 
-### Rightsize and schedule away idle capacity
+### Design for loose coupling and safe retries
 
-Start by inventorying your AWS resources and monitoring utilization for key signals like CPU, memory, and network throughput. Use AWS Compute Optimizer or similar rightsizing tools at regular intervals to spot idle or underutilized components, especially in stable workloads. For resources that do not need to run continuously, use scheduled stop/start patterns with AWS Instance Scheduler or equivalent automation to avoid paying for unused hours. Where possible, pair this with Auto Scaling so capacity follows demand instead of staying provisioned for peak load. Finally, remove components that are no longer needed and consider consolidating low-use resources to improve overall utilization.  
+In distributed systems, make component interactions resilient to latency and partial failure by keeping dependencies loosely coupled. Prefer asynchronous patterns like queues or event-driven flows when a synchronous hop would otherwise block the whole request path. If you must use mutating operations, make them idempotent so retries do not create duplicate side effects. Also, avoid tight shared-data dependencies that let one failing service cascade into others. Build in back pressure so a slow downstream component can signal the caller to slow down instead of overwhelming the system.
 
-**Why it matters:** Idle resources quietly inflate cloud spend without adding value. Reducing them lowers cost while also simplifying operations and making your environment easier to manage.
+**Why it matters:** Loose coupling helps isolate failures and improves overall resilience when networks are unreliable or services become slow. Idempotency and back pressure make retries safer and reduce the chance that a transient issue turns into an outage or data corruption.
 
 <!-- TIP_OF_THE_DAY_END -->
 
