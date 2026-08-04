@@ -29,7 +29,8 @@ async def update_readme() -> None:
     tip = await generate_tip()
 
     TIPS_DIR.mkdir(parents=True, exist_ok=True)
-    tip_path = TIPS_DIR / f"{today_iso()}.md"
+    tip_path = TIPS_DIR / today[:7] / f"{today}.md"
+    tip_path.parent.mkdir(parents=True, exist_ok=True)
     tip_path.write_text(tip.strip() + "\n", encoding="utf-8")
 
     updated = replace_tip_section(readme, tip)
