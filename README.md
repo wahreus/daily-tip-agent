@@ -6,13 +6,13 @@ The project uses Retrieval-Augmented Generation (RAG) over a committed SQLite ve
 
 <!-- TIP_OF_THE_DAY_START -->
 
-## Tip of the day [Thursday, August 6, 2026]
+## Tip of the day [Friday, August 7, 2026]
 
-### Make changes small, reversible, and automated
+### Make budget alerts actionable, not just visible
 
-Treat change management as a risk-reduction practice: break production changes into small increments, automate the deployment path, and make rollback part of the release design. In practice, use safe rollout patterns such as canary, blue/green, traffic splitting, or feature flags so you can validate outcomes before exposing all users. Test the same steps, security controls, and deployment configuration in pre-production that you will use in production, including health checks and integration tests. Plan ahead for unsuccessful changes by defining the revert path before release and ensuring the team can execute it quickly. Keep change records and infrastructure definitions current so updates are tracked instead of applied manually in place.
+Set AWS Budgets on each account and on key workloads using tags or cost categories, then configure notifications for both actual spend and forecasted spend. Daily budgets are especially useful when you want to catch overruns early enough to react before the month closes. Route alerts to email or SNS so they reach the people who can actually pause spend, right-size resources, or investigate a spike. Pair budget alerts with regular cost reviews so teams can compare current usage against the expected trend and adjust quickly. If your environment changes often, keep the budget thresholds tied to realistic forecasts instead of static numbers.
 
-**Why it matters:** Small, reversible changes are easier to validate and much easier to undo when something goes wrong. That lowers outage risk, reduces the need for emergency fixes, and helps teams ship changes more frequently with confidence.
+**Why it matters:** Budget alerts work best when they are specific, timely, and owned by the right team. That makes them a practical control for preventing surprise bills and keeping cloud spend aligned with business expectations.
 
 <!-- TIP_OF_THE_DAY_END -->
 
