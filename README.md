@@ -6,13 +6,13 @@ The project uses Retrieval-Augmented Generation (RAG) over a committed SQLite ve
 
 <!-- TIP_OF_THE_DAY_START -->
 
-## Tip of the day [Wed, August 12, 2026]
+## Tip of the day [Thursday, August 13, 2026]
 
-### Build a regular decommissioning routine
+### Make changes small and easy to undo
 
-Set up a standardized process to find and remove unused resources on a fixed schedule instead of waiting for costs to drift upward. Start with an inventory of assets and use tagging, cloud cost checks, and rightsizing recommendations to separate active resources from stale ones. Make the process broad enough to cover compute, storage, snapshots, images, and other assets that quietly accumulate after projects end or usage changes. Where possible, automate cleanup with lifecycle policies and approved decommission workflows so removals are consistent and low-risk. Review the cadence by account or workload size so high-spend environments are checked more often than small, stable ones. Keep the process iterative, because unused resources tend to reappear as teams ship new features and retire old ones.
+Design your delivery process so each deployment changes as little as possible and can be reversed quickly if needed. Use safe rollout patterns like canary, rolling, blue/green, traffic splitting, or feature flags to limit impact while you validate the change in production. Keep rollback or fix-forward plans documented and tested before release, and automate them in the pipeline wherever possible. Smaller, repeatable, standardized changes are easier to recover from than large bulk updates. If a change fails, automated rollback should stop the problem from spreading to all users at once.
 
-**Why it matters:** Unused resources still consume storage, compute, and management effort, even when nobody is using them. A repeatable cleanup process reduces waste, improves workload efficiency, and helps keep cloud spend aligned with real demand.
+**Why it matters:** Small reversible changes reduce blast radius and shorten recovery time when something goes wrong. They also let teams ship more frequently without requiring a risky all-at-once release.
 
 <!-- TIP_OF_THE_DAY_END -->
 
