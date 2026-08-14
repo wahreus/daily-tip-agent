@@ -6,13 +6,13 @@ The project uses Retrieval-Augmented Generation (RAG) over a committed SQLite ve
 
 <!-- TIP_OF_THE_DAY_START -->
 
-## Tip of the day [Thursday, August 13, 2026]
+## Tip of the day [Friday, August 14, 2026]
 
-### Make changes small and easy to undo
+### Ship in small slices with automatic rollback
 
-Design your delivery process so each deployment changes as little as possible and can be reversed quickly if needed. Use safe rollout patterns like canary, rolling, blue/green, traffic splitting, or feature flags to limit impact while you validate the change in production. Keep rollback or fix-forward plans documented and tested before release, and automate them in the pipeline wherever possible. Smaller, repeatable, standardized changes are easier to recover from than large bulk updates. If a change fails, automated rollback should stop the problem from spreading to all users at once.
+Break changes into smaller releases so each deployment is easier to validate and, if needed, undo. Use safe rollout patterns such as canary, rolling, blue/green, or feature flags to limit the blast radius of a defect. Pair each change with automated testing in the pipeline so you can confirm expected behavior before expanding traffic or promoting the release. If the deployment does not meet pre-defined success criteria, trigger an automated rollback to a known good version rather than relying on manual recovery steps. This approach reduces customer impact, shortens recovery time, and makes frequent delivery safer.
 
-**Why it matters:** Small reversible changes reduce blast radius and shorten recovery time when something goes wrong. They also let teams ship more frequently without requiring a risky all-at-once release.
+**Why it matters:** Small, reversible changes lower the risk of wide-scale outages and remove a lot of pressure from the deployment process. They also let teams release more often with more confidence, because failures are contained and recovery is built into the workflow.
 
 <!-- TIP_OF_THE_DAY_END -->
 
