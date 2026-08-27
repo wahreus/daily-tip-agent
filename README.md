@@ -6,13 +6,13 @@ The project uses Retrieval-Augmented Generation (RAG) over a committed SQLite ve
 
 <!-- TIP_OF_THE_DAY_START -->
 
-## Tip of the day [Wednesday, August 26, 2026]
+## Tip of the day [Thursday, August 27, 2026]
 
-### Monitor health with layered signals, not a single metric
+### Make improvement a scheduled operational habit
 
-Treat workload health as a combination of technical metrics, logs, traces, and outcome-based indicators, not just CPU or memory. Define clear baselines for normal behavior and set alerts on meaningful deviations rather than raw noise. Review dashboards regularly to look for trends, outliers, and changes in user-facing or business metrics such as latency, failure rates, and successful transactions. Use logs and traces to connect a spike in a metric to the specific request path or component causing it. Include operations health too, such as deployment success and incident response performance, so you can see whether the support process is helping or hurting workload health. Revisit what you monitor on a regular cadence so the signal stays relevant as the workload evolves.
+Treat continuous operational improvement as a recurring part of your delivery process, not an occasional cleanup task. Set aside dedicated time each cycle to review operations metrics, post-incident findings, and feedback from both automated signals and stakeholders. Use that input to prioritize a small set of concrete improvements, then implement them and measure whether the change actually moved the outcome you wanted. Keep the loop closed by documenting lessons learned and sharing them with the teams that can act on them. If an improvement does not deliver the expected result, try an alternative approach rather than leaving the issue open-ended.
 
-**Why it matters:** Good health monitoring reduces time to detection and helps you find root cause faster. It also improves recovery because you can spot degradation early and trigger the right response before customers are affected.
+**Why it matters:** This keeps operational excellence from becoming aspirational and makes it repeatable. Regular feedback loops help you catch recurring issues early, validate fixes, and steadily reduce risk and toil over time.
 
 <!-- TIP_OF_THE_DAY_END -->
 
