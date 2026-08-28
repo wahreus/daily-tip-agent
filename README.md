@@ -6,13 +6,13 @@ The project uses Retrieval-Augmented Generation (RAG) over a committed SQLite ve
 
 <!-- TIP_OF_THE_DAY_START -->
 
-## Tip of the day [Thursday, August 27, 2026]
+## Tip of the day [Friday, August 28, 2026]
 
-### Make improvement a scheduled operational habit
+### Use a multi-account structure as your main isolation boundary
 
-Treat continuous operational improvement as a recurring part of your delivery process, not an occasional cleanup task. Set aside dedicated time each cycle to review operations metrics, post-incident findings, and feedback from both automated signals and stakeholders. Use that input to prioritize a small set of concrete improvements, then implement them and measure whether the change actually moved the outcome you wanted. Keep the loop closed by documenting lessons learned and sharing them with the teams that can act on them. If an improvement does not deliver the expected result, try an alternative approach rather than leaving the issue open-ended.
+Design AWS account structure so production, non-production, and unrelated workloads live in separate member accounts under AWS Organizations. Keep workload resources out of the management account, and use organizational units to group accounts by business need, data sensitivity, or environment. This makes it easier to apply consistent guardrails with inherited policies while still allowing different controls where needed. It also reduces the blast radius if a workload is misconfigured or compromised. For teams that are growing, a landing zone approach helps standardize new account creation and keeps governance from becoming ad hoc.
 
-**Why it matters:** This keeps operational excellence from becoming aspirational and makes it repeatable. Regular feedback loops help you catch recurring issues early, validate fixes, and steadily reduce risk and toil over time.
+**Why it matters:** Account-level separation improves security, billing clarity, and access control at the same time. It also makes cost allocation and policy management much easier as your environment scales.
 
 <!-- TIP_OF_THE_DAY_END -->
 
