@@ -6,13 +6,13 @@ The project uses Retrieval-Augmented Generation (RAG) over a committed SQLite ve
 
 <!-- TIP_OF_THE_DAY_START -->
 
-## Tip of the day [Wednesday, September 2, 2026]
+## Tip of the day [Thursday, September 3, 2026]
 
-### Test the full recovery path, not just the backup
+### Make retries safe, bounded, and idempotent
 
-A disaster recovery plan is only real if you regularly exercise it end to end. Define recovery objectives first, then verify that your failover process actually meets your RTO and RPO targets in practice. Use a secondary Region with warm standby or pilot light infrastructure for minimally operable recovery, and keep critical data continuously replicated so the cutover can be fast. Store failover and failback steps in a shared playbook, and review it periodically so the team can execute it consistently during an incident. Where possible, automate the infrastructure with IaC so recovery is repeatable and less dependent on manual steps.
+In distributed systems, assume network calls can fail, duplicate, or arrive late, and design your interactions accordingly. Use retries only where the operation is idempotent or otherwise safe to repeat, and prefer SDK retry behavior with exponential backoff and jitter instead of rolling your own. Set explicit timeouts and maximum retry limits so one dependency cannot consume all client resources or create a retry storm. Test retry scenarios deliberately, including failure modes that should not be retried, such as permission or configuration errors. For mutating operations, confirm the backend can tolerate duplicate requests before enabling automatic retries.
 
-**Why it matters:** Backups alone do not prove that a workload can be restored within the time and data-loss limits the business expects. Regular testing exposes gaps in orchestration, replication, and team readiness before a real outage forces you to discover them.
+**Why it matters:** This reduces cascading failures and keeps transient issues from turning into outages. It also protects both your workload and the downstream service from unnecessary load during partial failures.
 
 <!-- TIP_OF_THE_DAY_END -->
 
