@@ -6,13 +6,13 @@ The project uses Retrieval-Augmented Generation (RAG) over a committed SQLite ve
 
 <!-- TIP_OF_THE_DAY_START -->
 
-## Tip of the day [Fri, September 4, 2026]
+## Tip of the day [Saturday, September 5, 2026]
 
-### Prefer short-lived access for every workload
+### Make change rollback-ready
 
-Use temporary credentials for both human and machine identities whenever possible, and reserve long-term credentials only for the rare cases that truly require them. For AWS access, federate users through an identity provider or use IAM roles so sessions can be issued as short-lived credentials instead of stored access keys. For workloads, replace hard-coded secret access keys with role-based access so the application never has to manage a reusable secret. If you must keep a long-term credential for an edge case, limit it tightly with role trust policies, network restrictions, and monitoring. Treat the ability to stop storing credentials as a security improvement in itself: fewer secrets means fewer chances for disclosure, sharing, or theft.
+Treat every production change as something you may need to reverse quickly. Before deployment, document a rollback or fix-forward plan, test it in a pre-production environment, and make sure the same deployment steps, security controls, and validation checks are used as in production. Favor frequent, small, reversible changes so failures are easier to isolate and recover from. Automate test environments and verification where possible, including functional, integration, load, and health checks. Keep change policies clear so teams know when a change can be preauthorized and when a rollback is required.
 
-**Why it matters:** Temporary credentials reduce the blast radius of compromise because they expire automatically and are harder to reuse later. They also simplify credential hygiene by removing the need to distribute, rotate, and protect long-lived access keys across teams and systems.
+**Why it matters:** Good change management reduces the blast radius of failures and makes recovery faster when something goes wrong. It also helps keep changes compliant with governance requirements instead of turning production updates into ad hoc work.
 
 <!-- TIP_OF_THE_DAY_END -->
 
