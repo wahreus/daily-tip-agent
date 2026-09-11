@@ -6,13 +6,13 @@ The project uses Retrieval-Augmented Generation (RAG) over a committed SQLite ve
 
 <!-- TIP_OF_THE_DAY_START -->
 
-## Tip of the day [Thursday, September 10, 2026]
+## Tip of the day [Friday, September 11, 2026]
 
-### Match the database to the workload, not the team’s habit
+### Make cost optimization a recurring operating habit
 
-Start by documenting the data characteristics that matter most: access patterns, latency, throughput, persistence, and whether the workload is mostly transactional or analytical. If you need ACID transactions, referential integrity, and strong consistency for things like ERP, CRM, or ecommerce systems, a relational database such as Amazon Aurora or Amazon RDS is usually the safer fit. If your application has common, predictable access patterns and needs to store or retrieve large volumes at high traffic, a key-value database like Amazon DynamoDB is often a better match. For semi-structured JSON-like data such as content catalogs or user profiles, a document database like Amazon DocumentDB can reduce schema friction. For reporting and analytics, consider a columnar warehouse like Amazon Redshift instead of forcing the OLTP database to do OLAP work. Use the workload’s shape to drive the choice, and add caching or read replicas when they improve the chosen design.
+Review cloud spend on a fixed cadence instead of waiting for a budget alert or a month-end surprise. Use dashboards such as AWS Cost Explorer to break down costs by service, account, and day so you can spot trends early and connect spend changes to workload changes. Set AWS Budgets with alerting through email or SNS so you can react quickly when usage crosses thresholds. Include cost and usage in regular operational reporting, and track whether recent scaling or deployment changes improved or worsened efficiency over time. Revisit usage patterns periodically, because shifts in demand can reveal better service choices or opportunities to tune scaling policies.
 
-**Why it matters:** Picking a purpose-built data store improves performance and reduces operational waste because the database is aligned to the workload instead of adapted to it. It also helps avoid the common anti-pattern of using one familiar database for every use case, which can create scalability and consistency problems later.
+**Why it matters:** Cost optimization improves when it is continuous rather than reactive. A regular review loop helps teams catch waste early, validate savings actions, and keep workloads aligned with changing demand.
 
 <!-- TIP_OF_THE_DAY_END -->
 
