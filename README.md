@@ -6,13 +6,13 @@ The project uses Retrieval-Augmented Generation (RAG) over a committed SQLite ve
 
 <!-- TIP_OF_THE_DAY_START -->
 
-## Tip of the day [Thursday, September 17, 2026]
+## Tip of the day [Friday, September 18, 2026]
 
-### Ship changes in small, reversible steps
+### Tighten IAM with roles, not one-off user permissions
 
-Prefer frequent, small deployments over large release batches so each change is easier to understand, validate, and undo if needed. Use safe rollout patterns like feature flags, canary releases, traffic splitting, rolling updates, or blue/green deployments to limit how much of production is exposed at once. Automate the rollout and include a clear rollback path so a failed change can be reverted quickly without manual reconstruction. Test the release process in pre-production with the same steps and controls you plan to use in production. If a change touches shared components, keep the scope as narrow as possible so defects affect fewer customers and are easier to isolate.
+Grant each identity only the actions it needs on the specific resources and conditions required for the task. Prefer IAM roles and groups over attaching permissions directly to individual users, because that makes access easier to manage and revoke when responsibilities change. Use resource-level scoping and policy conditions so a policy cannot be used more broadly than intended. Review permissions regularly and remove anything that is no longer needed, using tools like IAM Access Analyzer or AWS Config to spot overbroad access. For elevated access, require temporary, approved permissions instead of leaving powerful rights attached all the time.
 
-**Why it matters:** Small, reversible changes reduce the blast radius of mistakes and make it much easier to identify unintended consequences. They also lower recovery time and risk, which helps teams deliver faster with more confidence.
+**Why it matters:** Least privilege reduces the blast radius if credentials are compromised or a policy is misused. It also improves auditability, since your access model stays closer to actual job functions and project boundaries.
 
 <!-- TIP_OF_THE_DAY_END -->
 
