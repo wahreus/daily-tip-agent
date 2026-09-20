@@ -6,13 +6,13 @@ The project uses Retrieval-Augmented Generation (RAG) over a committed SQLite ve
 
 <!-- TIP_OF_THE_DAY_START -->
 
-## Tip of the day [Saturday, September 19, 2026]
+## Tip of the day [Sunday, September 20, 2026]
 
-### Design for loose coupling, then make retries safe
+### Keep data close to where it is used
 
-In distributed systems, assume networks will add latency, drop requests, and occasionally fail in ways that affect multiple components. Favor loosely coupled interactions so one service outage does not cascade through the whole workload. For any operation that can be repeated, make the mutating action idempotent before enabling retries. Use bounded retries with exponential backoff and jitter, and choose timeouts deliberately so callers stop waiting before they create more load than the system can absorb. Where possible, prefer asynchronous patterns such as queues or events for work that does not need an immediate response. Test these failure paths so your retry behavior is proven, not assumed.
+Design your workload to avoid moving large datasets farther than necessary. Use shared file systems or object storage for common data, and place frequently accessed data in the same Region or Availability Zone as the services that consume it. Before sending data over the network, reduce its size and choose formats that are efficient to transfer and process. For content delivered to end users, put a CDN or edge service in front so requests do not repeatedly pull the same data from your origin. In hybrid setups, prefer direct private connectivity and avoid unnecessary cross-Region transfers unless the architecture truly needs them.
 
-**Why it matters:** Loose coupling limits blast radius and makes failures easier to isolate and recover from. Safe retries and well-chosen timeouts improve availability without turning transient issues into traffic spikes or duplicate side effects.
+**Why it matters:** Less data movement usually means lower network cost, lower latency, and fewer bottlenecks between components. It also reduces operational and environmental overhead by cutting the amount of traffic your systems need to push around.
 
 <!-- TIP_OF_THE_DAY_END -->
 
