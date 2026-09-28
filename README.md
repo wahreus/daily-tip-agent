@@ -6,13 +6,13 @@ The project uses Retrieval-Augmented Generation (RAG) over a committed SQLite ve
 
 <!-- TIP_OF_THE_DAY_START -->
 
-## Tip of the day [Sunday, September 27, 2026]
+## Tip of the day [Monday, September 28, 2026]
 
-### Prefer temporary credentials over stored access keys
+### Make changes small, staged, and easy to roll back
 
-When your workload needs AWS access, use temporary credentials through IAM roles instead of hard-coding or storing long-term secret keys. Temporary credentials reduce the amount of sensitive material you need to manage and lower the blast radius if something is exposed. For workloads outside AWS, use IAM Roles Anywhere or a web identity flow where appropriate so systems can authenticate and receive short-lived credentials. If you must keep a long-term credential, restrict it tightly, grant only the needed actions and resources, and monitor its usage for anomalies. For on-premises access patterns, consider limiting the IAM user to assuming only one specific role and constraining the trust policy with source IP or network conditions. Treat any remaining long-term credential as an exception that should be audited, rotated, and eventually removed if possible.
+Prefer small, incremental deployments over large all-at-once releases so you can validate each change with limited blast radius. Use safe rollout patterns such as canary, rolling, blue/green, traffic splitting, or feature flags to expose changes to a small set of users first. Pair each rollout with monitoring and clear success criteria so you can quickly detect issues before expanding traffic. Automate rollback to a known good version when those criteria are not met, rather than relying on manual recovery during an incident. This keeps deployment risk low while still letting you ship frequently and learn from real production signals.
 
-**Why it matters:** Short-lived credentials are easier to secure because they expire automatically and are less valuable to attackers if stolen. They also simplify operational risk by reducing manual rotation and helping you enforce least privilege more consistently.
+**Why it matters:** Small reversible changes reduce the chance that a defect affects all customers at once. They also shorten recovery time because you can stop, revert, or adjust a change before it spreads widely.
 
 <!-- TIP_OF_THE_DAY_END -->
 
