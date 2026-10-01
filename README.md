@@ -6,13 +6,13 @@ The project uses Retrieval-Augmented Generation (RAG) over a committed SQLite ve
 
 <!-- TIP_OF_THE_DAY_START -->
 
-## Tip of the day [Wednesday, September 30, 2026]
+## Tip of the day [Thursday, October 1, 2026]
 
-### Cache what is read often, not what changes constantly
+### Turn incidents into system improvements
 
-Use caching for data access patterns that repeatedly fetch the same information, especially when your workload has a high read-to-write ratio or expensive backend calls. Avoid caching data that changes frequently unless you have a clear invalidation plan, because stale entries can create consistency issues. Set a TTL or another invalidation strategy so cached values stay fresh enough for your use case while still reducing pressure on the datastore. If multiple clients need the same data, prefer a shared remote cache to avoid duplicate local copies and inconsistent results. Monitor cache hit rate and tune cache size or access patterns if the hit rate stays low.
+After every operational failure or near-miss, run a structured post-incident review that looks past the immediate symptom and traces the root causes and contributing factors. Use a blameless approach so the team can focus on what failed in the system, process, or automation—not on who made the mistake. Document the incident thoroughly, including logs, communications, and actions taken, then capture the lessons learned in a shared knowledge base. If testing did not catch the issue, add or improve tests, guardrails, or runbooks so the same failure is less likely to recur. Make sure follow-up actions have clear ownership and are tracked to completion.
 
-**Why it matters:** Well-used caches improve read latency, throughput, user experience, and overall efficiency while also reducing cost. Without monitoring and invalidation, though, caching can hide stale data and give you a false sense of durability or availability.
+**Why it matters:** Operational failures become valuable only when they change future behavior. A consistent review process helps teams reduce repeat incidents, improve resilience, and build a culture that learns from mistakes instead of hiding them.
 
 <!-- TIP_OF_THE_DAY_END -->
 
