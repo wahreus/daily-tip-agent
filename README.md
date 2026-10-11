@@ -6,13 +6,13 @@ The project uses Retrieval-Augmented Generation (RAG) over a committed SQLite ve
 
 <!-- TIP_OF_THE_DAY_START -->
 
-## Tip of the day [Saturday, October 10, 2026]
+## Tip of the day [Sunday, October 11, 2026]
 
-### Match the instance type to the workload, not the peak
+### Automate quota monitoring before you need the increase
 
-Choose compute resources based on your application’s actual design, usage patterns, and configuration rather than defaulting to the largest instance that can survive peak load. Review the available instance families and features against what the workload really needs, since different compute options can deliver better performance for different components. Avoid over-provisioning to solve scaling or latency concerns when a more suitable instance type or configuration would fit the workload more precisely. Collect compute-related metrics so you can confirm whether the current choice is underused, constrained, or simply mismatched. When demand changes, adjust the compute option or right-size it instead of carrying excess capacity. This approach helps you keep performance efficient while aligning resources more closely to workload requirements.
+Treat service quotas as an operational control, not a one-time setup task. Monitor quota usage continuously and alert when consumption approaches your defined threshold, especially for quotas that can block scaling or availability. Build a clear response path for alerts, including who approves requests and how quickly they should be submitted. For critical workloads, you can automate quota increase requests, but test that automation carefully in non-production first to avoid runaway requests or feedback loops. Keep track of both soft quotas that can be raised and hard limits that require architectural changes.
 
-**Why it matters:** Picking the wrong compute option can reduce performance efficiency and waste capacity. Right-sized, workload-aligned compute choices usually improve both cost efficiency and operational flexibility, especially when usage patterns vary over time.
+**Why it matters:** Quota exhaustion can cause scaling failures, degraded user experience, or outright service disruption. Proactive monitoring and a practiced request process give you time to raise limits or adapt the design before the workload hits a wall.
 
 <!-- TIP_OF_THE_DAY_END -->
 
