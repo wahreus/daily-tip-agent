@@ -6,13 +6,13 @@ The project uses Retrieval-Augmented Generation (RAG) over a committed SQLite ve
 
 <!-- TIP_OF_THE_DAY_START -->
 
-## Tip of the day [Sunday, October 11, 2026]
+## Tip of the day [Monday, October 12, 2026]
 
-### Automate quota monitoring before you need the increase
+### Store secrets in a managed vault and automate rotation
 
-Treat service quotas as an operational control, not a one-time setup task. Monitor quota usage continuously and alert when consumption approaches your defined threshold, especially for quotas that can block scaling or availability. Build a clear response path for alerts, including who approves requests and how quickly they should be submitted. For critical workloads, you can automate quota increase requests, but test that automation carefully in non-production first to avoid runaway requests or feedback loops. Keep track of both soft quotas that can be raised and hard limits that require architectural changes.
+Use a purpose-built secrets manager to store API keys, passwords, and tokens instead of embedding them in source code, config files, or long-lived environment values. Keep secrets encrypted at rest and in transit, and grant access through fine-grained IAM roles rather than broad human access. Where possible, enable automated rotation so credential changes happen centrally without app teams manually updating every dependent service. Add auditing and monitoring for secret reads, writes, rotation events, and deletion attempts so you can spot unexpected usage quickly. For workloads that retrieve secrets frequently, use client-side caching to reduce latency and lower API costs while still keeping the source of truth in the managed service.
 
-**Why it matters:** Quota exhaustion can cause scaling failures, degraded user experience, or outright service disruption. Proactive monitoring and a practiced request process give you time to raise limits or adapt the design before the workload hits a wall.
+**Why it matters:** Secrets exposure is a high-risk failure mode because leaked credentials can be reused quickly and widely. Centralized storage, rotation, and auditability reduce the chance of accidental disclosure and make compromise easier to detect and contain.
 
 <!-- TIP_OF_THE_DAY_END -->
 
