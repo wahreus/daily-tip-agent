@@ -6,13 +6,13 @@ The project uses Retrieval-Augmented Generation (RAG) over a committed SQLite ve
 
 <!-- TIP_OF_THE_DAY_START -->
 
-## Tip of the day [Monday, October 12, 2026]
+## Tip of the day [Tuesday, October 13, 2026]
 
-### Store secrets in a managed vault and automate rotation
+### Automate retention, tiering, and deletion
 
-Use a purpose-built secrets manager to store API keys, passwords, and tokens instead of embedding them in source code, config files, or long-lived environment values. Keep secrets encrypted at rest and in transit, and grant access through fine-grained IAM roles rather than broad human access. Where possible, enable automated rotation so credential changes happen centrally without app teams manually updating every dependent service. Add auditing and monitoring for secret reads, writes, rotation events, and deletion attempts so you can spot unexpected usage quickly. For workloads that retrieve secrets frequently, use client-side caching to reduce latency and lower API costs while still keeping the source of truth in the managed service.
+Treat data lifecycle management as an automated policy, not a manual cleanup task. Classify datasets by sensitivity, retention needs, and access patterns, then define rules for how long each type should stay in hot storage, when it should move to lower-cost tiers, and when it should be deleted. Use native lifecycle features where possible, such as S3 lifecycle policies, EBS snapshot automation, EFS lifecycle management, or ECR cleanup policies. Also make sure the process includes monitored, automated destruction for data that has outlived its business, legal, or regulatory purpose. Regularly review the policies and use configuration checks to catch resources that are missing lifecycle automation.
 
-**Why it matters:** Secrets exposure is a high-risk failure mode because leaked credentials can be reused quickly and widely. Centralized storage, rotation, and auditability reduce the chance of accidental disclosure and make compromise easier to detect and contain.
+**Why it matters:** Well-defined lifecycle management improves compliance, reduces security risk, and lowers storage cost. It also keeps teams from relying on manual deletion or retaining data longer than necessary, which increases operational overhead and environmental impact.
 
 <!-- TIP_OF_THE_DAY_END -->
 
