@@ -6,13 +6,13 @@ The project uses Retrieval-Augmented Generation (RAG) over a committed SQLite ve
 
 <!-- TIP_OF_THE_DAY_START -->
 
-## Tip of the day [Tuesday, October 13, 2026]
+## Tip of the day [Wednesday, October 14, 2026]
 
-### Automate retention, tiering, and deletion
+### Monitor the whole path, not just the server
 
-Treat data lifecycle management as an automated policy, not a manual cleanup task. Classify datasets by sensitivity, retention needs, and access patterns, then define rules for how long each type should stay in hot storage, when it should move to lower-cost tiers, and when it should be deleted. Use native lifecycle features where possible, such as S3 lifecycle policies, EBS snapshot automation, EFS lifecycle management, or ECR cleanup policies. Also make sure the process includes monitored, automated destruction for data that has outlived its business, legal, or regulatory purpose. Regularly review the policies and use configuration checks to catch resources that are missing lifecycle automation.
+Treat workload health monitoring as an end-to-end practice: collect logs and metrics from every workload component and its AWS dependencies, then centralize them so you can spot trends and anomalies quickly. Define a small set of meaningful metrics for availability, latency, errors, and saturation, and wire alarms to notify you when thresholds are crossed. Add distributed tracing so you can follow a request through the system and narrow down where failures or slowdowns begin. For external endpoints, use synthetic checks to continuously validate that the user-facing path still works as expected. Review your dashboards and alert rules regularly so they stay aligned with how the workload actually behaves.
 
-**Why it matters:** Well-defined lifecycle management improves compliance, reduces security risk, and lowers storage cost. It also keeps teams from relying on manual deletion or retaining data longer than necessary, which increases operational overhead and environmental impact.
+**Why it matters:** Good health monitoring helps you detect degradation before users do and reduces the time needed to isolate root cause. It also makes it easier to automate response actions, scale appropriately, and recover faster when a component or dependency starts failing.
 
 <!-- TIP_OF_THE_DAY_END -->
 
