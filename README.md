@@ -6,13 +6,13 @@ The project uses Retrieval-Augmented Generation (RAG) over a committed SQLite ve
 
 <!-- TIP_OF_THE_DAY_START -->
 
-## Tip of the day [Wednesday, October 14, 2026]
+## Tip of the day [Thu, October 15, 2026]
 
-### Monitor the whole path, not just the server
+### Centralize security logs in a dedicated archive account
 
-Treat workload health monitoring as an end-to-end practice: collect logs and metrics from every workload component and its AWS dependencies, then centralize them so you can spot trends and anomalies quickly. Define a small set of meaningful metrics for availability, latency, errors, and saturation, and wire alarms to notify you when thresholds are crossed. Add distributed tracing so you can follow a request through the system and narrow down where failures or slowdowns begin. For external endpoints, use synthetic checks to continuously validate that the user-facing path still works as expected. Review your dashboards and alert rules regularly so they stay aligned with how the workload actually behaves.
+Aggregate security-related logs from workloads and AWS services into a separate log archive account instead of keeping them only in each application account. Include sources such as CloudTrail, AWS WAF, Elastic Load Balancing, Route 53, and any other service logs that help you investigate activity across the environment. Standardizing these logs in one place makes it easier to feed a SIEM or other analytics tooling, correlate findings, and respond faster to suspicious events. Use cross-account permissions so security teams can access the data without depending on the workload accounts themselves. Keep retention and lifecycle policies aligned to compliance and investigation needs so the archive stays useful without becoming expensive to manage.
 
-**Why it matters:** Good health monitoring helps you detect degradation before users do and reduces the time needed to isolate root cause. It also makes it easier to automate response actions, scale appropriately, and recover faster when a component or dependency starts failing.
+**Why it matters:** Centralized logging reduces the risk of log tampering if a workload account is compromised. It also gives security teams a single integration point for analysis, alerting, and escalation, which improves detection and response speed.
 
 <!-- TIP_OF_THE_DAY_END -->
 
