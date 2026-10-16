@@ -6,13 +6,13 @@ The project uses Retrieval-Augmented Generation (RAG) over a committed SQLite ve
 
 <!-- TIP_OF_THE_DAY_START -->
 
-## Tip of the day [Thu, October 15, 2026]
+## Tip of the day [Friday, October 16, 2026]
 
-### Centralize security logs in a dedicated archive account
+### Make health visible before incidents escalate
 
-Aggregate security-related logs from workloads and AWS services into a separate log archive account instead of keeping them only in each application account. Include sources such as CloudTrail, AWS WAF, Elastic Load Balancing, Route 53, and any other service logs that help you investigate activity across the environment. Standardizing these logs in one place makes it easier to feed a SIEM or other analytics tooling, correlate findings, and respond faster to suspicious events. Use cross-account permissions so security teams can access the data without depending on the workload accounts themselves. Keep retention and lifecycle policies aligned to compliance and investigation needs so the archive stays useful without becoming expensive to manage.
+Build a small set of dashboards that show your team’s key operational metrics in one place, and make them easy to access for both operators and leaders. Include the signals that define operational health for your services, not just infrastructure noise, so you can spot trends and prioritize improvement work. Pair those dashboards with alarms that notify the right people and can trigger incident workflows when thresholds are crossed. Add a simple status page that can be updated quickly during an event, including ownership, coordination details, and any user workarounds. Review the reports regularly so they reflect current KPIs and business needs, and use them to drive conversations about operational gaps. If you also surface AWS Health events, teams can distinguish internal issues from cloud-provider events faster.
 
-**Why it matters:** Centralized logging reduces the risk of log tampering if a workload account is compromised. It also gives security teams a single integration point for analysis, alerting, and escalation, which improves detection and response speed.
+**Why it matters:** Clear health visibility reduces manual reporting and speeds up incident detection and response. It also builds trust with stakeholders by showing current status and trends, not just after-action summaries.
 
 <!-- TIP_OF_THE_DAY_END -->
 
