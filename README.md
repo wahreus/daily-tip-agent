@@ -6,13 +6,13 @@ The project uses Retrieval-Augmented Generation (RAG) over a committed SQLite ve
 
 <!-- TIP_OF_THE_DAY_START -->
 
-## Tip of the day [Friday, October 16, 2026]
+## Tip of the day [Saturday, October 17, 2026]
 
-### Make health visible before incidents escalate
+### Match storage to access patterns, not habits
 
-Build a small set of dashboards that show your team’s key operational metrics in one place, and make them easy to access for both operators and leaders. Include the signals that define operational health for your services, not just infrastructure noise, so you can spot trends and prioritize improvement work. Pair those dashboards with alarms that notify the right people and can trigger incident workflows when thresholds are crossed. Add a simple status page that can be updated quickly during an event, including ownership, coordination details, and any user workarounds. Review the reports regularly so they reflect current KPIs and business needs, and use them to drive conversations about operational gaps. If you also surface AWS Health events, teams can distinguish internal issues from cloud-provider events faster.
+Choose your storage service based on how the workload actually reads, writes, retains, and serves data. Start by classifying the data as structured, semi-structured, or unstructured, then check whether it is persistent, ephemeral, or transient. Next, compare the workload’s latency, throughput, IOPS, durability, and retention needs against purpose-built options instead of defaulting to a familiar database or a single storage tier. If the access pattern is read-heavy, write-heavy, bursty, archival, or online versus offline, pick storage that fits that pattern or adjust the application to better align with the storage model. Revisit the choice over time, because access patterns often change as features, traffic, and data growth evolve.
 
-**Why it matters:** Clear health visibility reduces manual reporting and speeds up incident detection and response. It also builds trust with stakeholders by showing current status and trends, not just after-action summaries.
+**Why it matters:** Proper storage selection reduces wasted compute and storage capacity while improving performance efficiency. It also lowers the risk of using an overbuilt or underperforming service for the workload’s real needs.
 
 <!-- TIP_OF_THE_DAY_END -->
 
