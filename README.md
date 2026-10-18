@@ -6,13 +6,13 @@ The project uses Retrieval-Augmented Generation (RAG) over a committed SQLite ve
 
 <!-- TIP_OF_THE_DAY_START -->
 
-## Tip of the day [Saturday, October 17, 2026]
+## Tip of the day [Sunday, October 18, 2026]
 
-### Match storage to access patterns, not habits
+### Make ORRs a repeatable launch gate
 
-Choose your storage service based on how the workload actually reads, writes, retains, and serves data. Start by classifying the data as structured, semi-structured, or unstructured, then check whether it is persistent, ephemeral, or transient. Next, compare the workload’s latency, throughput, IOPS, durability, and retention needs against purpose-built options instead of defaulting to a familiar database or a single storage tier. If the access pattern is read-heavy, write-heavy, bursty, archival, or online versus offline, pick storage that fits that pattern or adjust the application to better align with the storage model. Revisit the choice over time, because access patterns often change as features, traffic, and data growth evolve.
+Treat operational readiness reviews as a standard checklist-based gate before launch, not a one-time ceremony. Bring together security, operations, and development stakeholders, and keep the first version focused on a manageable set of requirements. Include items that reflect how you actually operate the workload, such as architectural recommendations, operational processes, event management, and release quality. Use discoveries from incidents and postmortems to evolve the checklist so it prevents repeat failures instead of just confirming good intentions. If a review surfaces a gap without a mitigation, add it to the backlog and close it before launch. Over time, use the same ORR pattern across workloads so teams can self-serve the review and compare readiness consistently.
 
-**Why it matters:** Proper storage selection reduces wasted compute and storage capacity while improving performance efficiency. It also lowers the risk of using an overbuilt or underperforming service for the workload’s real needs.
+**Why it matters:** ORRs help you catch operational gaps before they become production incidents. A consistent review process also improves shared accountability across engineering, operations, and security, which lowers launch risk and makes support handoffs smoother.
 
 <!-- TIP_OF_THE_DAY_END -->
 
