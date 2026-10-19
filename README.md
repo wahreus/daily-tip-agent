@@ -6,13 +6,13 @@ The project uses Retrieval-Augmented Generation (RAG) over a committed SQLite ve
 
 <!-- TIP_OF_THE_DAY_START -->
 
-## Tip of the day [Sunday, October 18, 2026]
+## Tip of the day [Monday, October 19, 2026]
 
-### Make ORRs a repeatable launch gate
+### Segment and inspect network traffic
 
-Treat operational readiness reviews as a standard checklist-based gate before launch, not a one-time ceremony. Bring together security, operations, and development stakeholders, and keep the first version focused on a manageable set of requirements. Include items that reflect how you actually operate the workload, such as architectural recommendations, operational processes, event management, and release quality. Use discoveries from incidents and postmortems to evolve the checklist so it prevents repeat failures instead of just confirming good intentions. If a review surfaces a gap without a mitigation, add it to the backlog and close it before launch. Over time, use the same ORR pattern across workloads so teams can self-serve the review and compare readiness consistently.
+Design your network in layers so internet-facing components are separated from internal systems like databases and admin services. Then enforce traffic flow between those layers with explicit controls such as security groups, route tables, and firewall rules. Add inspection points where traffic crosses boundaries so you can validate both allowed and denied flows against expected behavior, not just ports and protocols. For public endpoints, use edge protections like AWS WAF and AWS Shield, and consider AWS Network Firewall for deeper VPC-level inspection. Automate these controls through centralized policy management so new services inherit the same protection pattern by default.
 
-**Why it matters:** ORRs help you catch operational gaps before they become production incidents. A consistent review process also improves shared accountability across engineering, operations, and security, which lowers launch risk and makes support handoffs smoother.
+**Why it matters:** Network threats often succeed by moving laterally after an initial foothold, so layered segmentation limits blast radius. Inspection and centralized enforcement also make it easier to detect abnormal traffic early and respond consistently across workloads.
 
 <!-- TIP_OF_THE_DAY_END -->
 
