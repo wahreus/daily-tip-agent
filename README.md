@@ -6,13 +6,13 @@ The project uses Retrieval-Augmented Generation (RAG) over a committed SQLite ve
 
 <!-- TIP_OF_THE_DAY_START -->
 
-## Tip of the day [Monday, October 19, 2026]
+## Tip of the day [Tue, October 20, 2026]
 
-### Segment and inspect network traffic
+### Pre-assign incident roles and practice the plan
 
-Design your network in layers so internet-facing components are separated from internal systems like databases and admin services. Then enforce traffic flow between those layers with explicit controls such as security groups, route tables, and firewall rules. Add inspection points where traffic crosses boundaries so you can validate both allowed and denied flows against expected behavior, not just ports and protocols. For public endpoints, use edge protections like AWS WAF and AWS Shield, and consider AWS Network Firewall for deeper VPC-level inspection. Automate these controls through centralized policy management so new services inherit the same protection pattern by default.
+Build your security incident response around a documented plan with clear roles, communication paths, and decision points before an event happens. Make sure the plan covers who is responsible, accountable, consulted, and informed, so your team can move fast without confusion during containment and recovery. Keep logging and observability in place so responders can quickly identify what changed, isolate affected systems, and restore service to a known good state. Pre-provision the tooling and access needed for investigations, including break-glass access and automated response actions where appropriate. Then run regular game days to validate that the plan, permissions, and technical controls still work under pressure.
 
-**Why it matters:** Network threats often succeed by moving laterally after an initial foothold, so layered segmentation limits blast radius. Inspection and centralized enforcement also make it easier to detect abnormal traffic early and respond consistently across workloads.
+**Why it matters:** In an incident, speed and clarity reduce impact. A well-practiced plan helps your team contain the issue faster, preserve evidence, and recover safely instead of improvising under stress.
 
 <!-- TIP_OF_THE_DAY_END -->
 
