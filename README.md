@@ -6,13 +6,13 @@ The project uses Retrieval-Augmented Generation (RAG) over a committed SQLite ve
 
 <!-- TIP_OF_THE_DAY_START -->
 
-## Tip of the day [Tue, October 20, 2026]
+## Tip of the day [Wednesday, October 21, 2026]
 
-### Pre-assign incident roles and practice the plan
+### Encrypt, isolate, and test backups
 
-Build your security incident response around a documented plan with clear roles, communication paths, and decision points before an event happens. Make sure the plan covers who is responsible, accountable, consulted, and informed, so your team can move fast without confusion during containment and recovery. Keep logging and observability in place so responders can quickly identify what changed, isolate affected systems, and restore service to a known good state. Pre-provision the tooling and access needed for investigations, including break-glass access and automated response actions where appropriate. Then run regular game days to validate that the plan, permissions, and technical controls still work under pressure.
+Treat backups as a separate security boundary, not just a copy of production data. Encrypt every backup and the underlying data stores so confidentiality and integrity are preserved end to end. Keep backup access tightly scoped with least-privilege permissions, and avoid giving the same people or automation full control over both production and restore paths. For critical systems, use logical isolation such as a separate backup vault or account to reduce the blast radius of ransomware or accidental deletion. Finally, run restore tests on a regular schedule so you know the backups are both readable and actually recoverable when you need them.
 
-**Why it matters:** In an incident, speed and clarity reduce impact. A well-practiced plan helps your team contain the issue faster, preserve evidence, and recover safely instead of improvising under stress.
+**Why it matters:** Backup protection fails if attackers or mistakes can delete, tamper with, or restore from compromised copies. Encryption, isolation, and periodic validation make backups trustworthy for real recovery events and help you meet your RPO/RTO goals.
 
 <!-- TIP_OF_THE_DAY_END -->
 
