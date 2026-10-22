@@ -6,13 +6,13 @@ The project uses Retrieval-Augmented Generation (RAG) over a committed SQLite ve
 
 <!-- TIP_OF_THE_DAY_START -->
 
-## Tip of the day [Wednesday, October 21, 2026]
+## Tip of the day [Thursday, October 22, 2026]
 
-### Encrypt, isolate, and test backups
+### Use separate AWS accounts as your isolation boundary
 
-Treat backups as a separate security boundary, not just a copy of production data. Encrypt every backup and the underlying data stores so confidentiality and integrity are preserved end to end. Keep backup access tightly scoped with least-privilege permissions, and avoid giving the same people or automation full control over both production and restore paths. For critical systems, use logical isolation such as a separate backup vault or account to reduce the blast radius of ransomware or accidental deletion. Finally, run restore tests on a regular schedule so you know the backups are both readable and actually recoverable when you need them.
+Organize AWS workloads into multiple accounts so production, development, test, and unrelated applications are separated by default. AWS Well-Architected recommends account-level separation because it creates a strong boundary for security, billing, and access, and it reduces the blast radius if something is misconfigured or compromised. Design your organizational unit hierarchy so guardrails can be applied consistently and inherited by member accounts. Keep workload resources only in member accounts, not in the management account, and make the account structure reflect how your teams own costs and operations. Avoid putting workloads with different sensitivity levels into the same account, even if they are technically related. A clean multi-account structure also makes it easier to centralize governance while still allowing teams to move quickly.
 
-**Why it matters:** Backup protection fails if attackers or mistakes can delete, tamper with, or restore from compromised copies. Encryption, isolation, and periodic validation make backups trustworthy for real recovery events and help you meet your RPO/RTO goals.
+**Why it matters:** Good account structure improves security isolation and makes policy enforcement much simpler at scale. It also helps with cost allocation and operational clarity, which reduces risk as your AWS footprint grows.
 
 <!-- TIP_OF_THE_DAY_END -->
 
