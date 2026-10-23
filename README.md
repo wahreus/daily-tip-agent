@@ -6,13 +6,13 @@ The project uses Retrieval-Augmented Generation (RAG) over a committed SQLite ve
 
 <!-- TIP_OF_THE_DAY_START -->
 
-## Tip of the day [Thursday, October 22, 2026]
+## Tip of the day [Friday, October 23, 2026]
 
-### Use separate AWS accounts as your isolation boundary
+### Design throttling for retries, load shedding for overload
 
-Organize AWS workloads into multiple accounts so production, development, test, and unrelated applications are separated by default. AWS Well-Architected recommends account-level separation because it creates a strong boundary for security, billing, and access, and it reduces the blast radius if something is misconfigured or compromised. Design your organizational unit hierarchy so guardrails can be applied consistently and inherited by member accounts. Keep workload resources only in member accounts, not in the management account, and make the account structure reflect how your teams own costs and operations. Avoid putting workloads with different sensitivity levels into the same account, even if they are technically related. A clean multi-account structure also makes it easier to centralize governance while still allowing teams to move quickly.
+Use throttling when callers can safely retry, and use load shedding or buffering when they cannot. Before setting limits, analyze the expected demand, rate of change, request size, and required response time so your controls match real traffic patterns. If you expect bursts, configure explicit rate limits and test them under load; don’t rely on default endpoint settings. For retry-capable clients, return clear signals that tell them to back off and try again later instead of letting the workload fail unpredictably. For non-retryable clients, absorb the spike with a queue or similar buffer so you can process requests later and keep the system stable. Make sure your design also accounts for duplicate requests and maximum concurrency on consumers so overload controls do not create new failure modes.
 
-**Why it matters:** Good account structure improves security isolation and makes policy enforcement much simpler at scale. It also helps with cost allocation and operational clarity, which reduces risk as your AWS footprint grows.
+**Why it matters:** Proper throttling and load shedding smooth demand peaks, which helps keep supported requests flowing during spikes, retry storms, or flooding attacks. It also reduces the amount of provisioned capacity you need, lowering cost while improving resilience.
 
 <!-- TIP_OF_THE_DAY_END -->
 
