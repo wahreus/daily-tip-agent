@@ -6,13 +6,13 @@ The project uses Retrieval-Augmented Generation (RAG) over a committed SQLite ve
 
 <!-- TIP_OF_THE_DAY_START -->
 
-## Tip of the day [Friday, October 23, 2026]
+## Tip of the day [Saturday, October 24, 2026]
 
-### Design throttling for retries, load shedding for overload
+### Centralize and correlate security signals fast
 
-Use throttling when callers can safely retry, and use load shedding or buffering when they cannot. Before setting limits, analyze the expected demand, rate of change, request size, and required response time so your controls match real traffic patterns. If you expect bursts, configure explicit rate limits and test them under load; don’t rely on default endpoint settings. For retry-capable clients, return clear signals that tell them to back off and try again later instead of letting the workload fail unpredictably. For non-retryable clients, absorb the spike with a queue or similar buffer so you can process requests later and keep the system stable. Make sure your design also accounts for duplicate requests and maximum concurrency on consumers so overload controls do not create new failure modes.
+Capture security-relevant logs, findings, and metrics in standardized locations so investigators can reliably search and compare events across services. Enable service and application logging, then route alerts and findings into a central workflow or SIEM where they can be correlated with identity, network, and resource context. Use managed detections such as GuardDuty, CloudTrail, CloudWatch alarms, and AWS Config history to provide multiple angles on the same event. Enrich alerts with asset, user, and policy data so teams can quickly tell whether an issue is routine noise or a real incident. Where possible, automate initial triage and repetitive response steps to reduce manual effort and shorten time to investigation.
 
-**Why it matters:** Proper throttling and load shedding smooth demand peaks, which helps keep supported requests flowing during spikes, retry storms, or flooding attacks. It also reduces the amount of provisioned capacity you need, lowering cost while improving resilience.
+**Why it matters:** Centralized, enriched detections reduce alert fatigue and help responders understand severity faster. That leads to quicker containment decisions and a lower chance that a real security incident is missed or misclassified.
 
 <!-- TIP_OF_THE_DAY_END -->
 
