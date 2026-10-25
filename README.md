@@ -6,13 +6,13 @@ The project uses Retrieval-Augmented Generation (RAG) over a committed SQLite ve
 
 <!-- TIP_OF_THE_DAY_START -->
 
-## Tip of the day [Saturday, October 24, 2026]
+## Tip of the day [Sunday, October 25, 2026]
 
-### Centralize and correlate security signals fast
+### Match commitment level to workload shape
 
-Capture security-relevant logs, findings, and metrics in standardized locations so investigators can reliably search and compare events across services. Enable service and application logging, then route alerts and findings into a central workflow or SIEM where they can be correlated with identity, network, and resource context. Use managed detections such as GuardDuty, CloudTrail, CloudWatch alarms, and AWS Config history to provide multiple angles on the same event. Enrich alerts with asset, user, and policy data so teams can quickly tell whether an issue is routine noise or a real incident. Where possible, automate initial triage and repetitive response steps to reduce manual effort and shorten time to investigation.
+Choose your AWS pricing model based on how predictable each workload is, not just on the headline discount. Use Savings Plans or Reserved Instances for steady, always-on components where you can commit to consistent usage over time. Use Spot Instances for stateless or interruptible jobs that can tolerate capacity changes. Keep On-Demand for short-lived or irregular workloads that do not run long enough to benefit from a commitment. A practical approach is to start with a small commitment, review the top recommendations, and then adjust as your usage patterns become clearer.
 
-**Why it matters:** Centralized, enriched detections reduce alert fatigue and help responders understand severity faster. That leads to quicker containment decisions and a lower chance that a real security incident is missed or misclassified.
+**Why it matters:** The best savings come from aligning pricing model to actual usage patterns, which reduces waste without creating unnecessary commitment risk. This also helps you keep flexibility where the workload needs it while still capturing discounts on predictable capacity.
 
 <!-- TIP_OF_THE_DAY_END -->
 
