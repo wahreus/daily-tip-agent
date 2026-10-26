@@ -6,13 +6,13 @@ The project uses Retrieval-Augmented Generation (RAG) over a committed SQLite ve
 
 <!-- TIP_OF_THE_DAY_START -->
 
-## Tip of the day [Sunday, October 25, 2026]
+## Tip of the day [Monday, October 26, 2026]
 
-### Match commitment level to workload shape
+### Benchmark first, then validate under load
 
-Choose your AWS pricing model based on how predictable each workload is, not just on the headline discount. Use Savings Plans or Reserved Instances for steady, always-on components where you can commit to consistent usage over time. Use Spot Instances for stateless or interruptible jobs that can tolerate capacity changes. Keep On-Demand for short-lived or irregular workloads that do not run long enough to benefit from a commitment. A practical approach is to start with a small commitment, review the top recommendations, and then adjust as your usage patterns become clearer.
+Use benchmarking to establish a clear baseline before you make performance-related changes, especially when evaluating a significant component or service update. Define the objective, success metrics, and KPIs up front so you can compare results consistently over time. Choose measurements that reflect the user experience and workload behavior, such as latency, throughput, CPU utilization, and response-time percentiles. Automate benchmark runs early in the delivery pipeline to catch deviations quickly, then follow up with load testing to confirm how the workload behaves under realistic production conditions. Tie results back to the build so performance regressions are easy to trace and review.
 
-**Why it matters:** The best savings come from aligning pricing model to actual usage patterns, which reduces waste without creating unnecessary commitment risk. This also helps you keep flexibility where the workload needs it while still capturing discounts on predictable capacity.
+**Why it matters:** Benchmarking gives you fast feedback and helps justify architectural changes with evidence instead of assumptions. Pairing it with load testing ensures you understand both small-change performance shifts and how the system behaves at real scale.
 
 <!-- TIP_OF_THE_DAY_END -->
 
