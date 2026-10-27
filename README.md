@@ -6,13 +6,13 @@ The project uses Retrieval-Augmented Generation (RAG) over a committed SQLite ve
 
 <!-- TIP_OF_THE_DAY_START -->
 
-## Tip of the day [Monday, October 26, 2026]
+## Tip of the day [Tuesday, October 27, 2026]
 
-### Benchmark first, then validate under load
+### Automate classification and enforce it with tags
 
-Use benchmarking to establish a clear baseline before you make performance-related changes, especially when evaluating a significant component or service update. Define the objective, success metrics, and KPIs up front so you can compare results consistently over time. Choose measurements that reflect the user experience and workload behavior, such as latency, throughput, CPU utilization, and response-time percentiles. Automate benchmark runs early in the delivery pipeline to catch deviations quickly, then follow up with load testing to confirm how the workload behaves under realistic production conditions. Tie results back to the build so performance regressions are easy to trace and review.
+Define a simple data classification scheme, such as public, internal, confidential, and restricted, and apply it consistently across your workloads. Use automation to identify sensitive data and reduce the risk of manual misclassification as data volumes grow. Where supported, encode the classification in resource tags like `Classification=PHI` or `Sensitivity=High`, but avoid putting sensitive details in the tag values themselves. Pair those tags with monitoring and governance so you can detect drift, such as encryption settings changing or untagged data appearing in your environment. Periodically audit for unclassified data and update tags and handling rules as data moves or changes over time.
 
-**Why it matters:** Benchmarking gives you fast feedback and helps justify architectural changes with evidence instead of assumptions. Pairing it with load testing ensures you understand both small-change performance shifts and how the system behaves at real scale.
+**Why it matters:** Clear classification helps you apply the right controls for access, encryption, retention, and monitoring without guessing. It also reduces human error and makes compliance and incident response much easier because you can quickly see which data needs the strongest protections.
 
 <!-- TIP_OF_THE_DAY_END -->
 
