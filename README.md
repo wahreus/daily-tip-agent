@@ -6,13 +6,13 @@ The project uses Retrieval-Augmented Generation (RAG) over a committed SQLite ve
 
 <!-- TIP_OF_THE_DAY_START -->
 
-## Tip of the day [Wednesday, October 28, 2026]
+## Tip of the day [Thursday, October 29, 2026]
 
-### Make improvement a recurring operating rhythm
+### Push content closer to users with edge caching
 
-Treat continuous improvement as a scheduled operational activity, not an ad hoc reaction after something breaks. Set aside regular time to review operations metrics, anomalies, and lessons learned with both engineers and stakeholders so you can prioritize the next improvements. Use feedback loops from incidents, customer signals, and automation outcomes to decide what to change, then track whether those changes actually improved performance or reliability. Keep the changes small and reversible so you can learn quickly without creating large new risks. Where possible, turn repeated manual work into safe automation with guardrails such as approvals, thresholds, and rate limits. This approach helps you steadily reduce toil while improving the workload over time.
+For user-facing content delivery, use Amazon CloudFront so responses can be served from edge locations instead of repeatedly going back to the origin. Design your cache behavior to maximize cache hit ratio by setting appropriate TTLs, varying only on headers or cookies that truly change the response, and invalidating only when necessary. If your application needs custom logic at the edge, use Lambda@Edge to tailor content near the user and reduce latency. For global workloads, consider Route 53 routing policies to send users to the best-performing endpoint based on location and latency. If origin load or large file transfers are a concern, CloudFront Origin Shield and S3 Transfer Acceleration can further improve delivery efficiency.
 
-**Why it matters:** A disciplined review-and-improve cycle prevents teams from drifting into reactive firefighting. It also makes it easier to connect operational work to business outcomes, so improvements get funded and sustained.
+**Why it matters:** Serving more requests from edge caches reduces latency for users and decreases pressure on your origin. That usually improves availability and keeps scaling costs under control, especially during traffic spikes or when users are geographically dispersed.
 
 <!-- TIP_OF_THE_DAY_END -->
 
