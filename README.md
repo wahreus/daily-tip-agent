@@ -6,13 +6,13 @@ The project uses Retrieval-Augmented Generation (RAG) over a committed SQLite ve
 
 <!-- TIP_OF_THE_DAY_START -->
 
-## Tip of the day [Thursday, October 29, 2026]
+## Tip of the day [Friday, October 30, 2026]
 
-### Push content closer to users with edge caching
+### Prefer hub-and-spoke over mesh
 
-For user-facing content delivery, use Amazon CloudFront so responses can be served from edge locations instead of repeatedly going back to the origin. Design your cache behavior to maximize cache hit ratio by setting appropriate TTLs, varying only on headers or cookies that truly change the response, and invalidating only when necessary. If your application needs custom logic at the edge, use Lambda@Edge to tailor content near the user and reduce latency. For global workloads, consider Route 53 routing policies to send users to the best-performing endpoint based on location and latency. If origin load or large file transfers are a concern, CloudFront Origin Shield and S3 Transfer Acceleration can further improve delivery efficiency.
+When planning network topology, favor a hub-and-spoke model instead of building many-to-many connections between every VPC and environment. A hub such as AWS Transit Gateway makes it easier to centralize routing, control which networks can talk to each other, and avoid accidental east-west reachability. Design route tables so only the required paths exist, and omit routes between workloads that should remain isolated. As part of the plan, verify that connected networks use non-overlapping CIDR ranges and size subnets with future growth and Availability Zone expansion in mind. If you need segmentation for compliance or different trust levels, use separate VPCs and subnets rather than relying on an overly complex mesh.
 
-**Why it matters:** Serving more requests from edge caches reduces latency for users and decreases pressure on your origin. That usually improves availability and keeps scaling costs under control, especially during traffic spikes or when users are geographically dispersed.
+**Why it matters:** Hub-and-spoke topologies reduce operational complexity and make connectivity policy easier to audit and change safely. They also help prevent IP conflicts and future rework as your environment grows across VPCs, on-premises links, and multiple Availability Zones.
 
 <!-- TIP_OF_THE_DAY_END -->
 
