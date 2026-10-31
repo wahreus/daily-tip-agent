@@ -6,13 +6,13 @@ The project uses Retrieval-Augmented Generation (RAG) over a committed SQLite ve
 
 <!-- TIP_OF_THE_DAY_START -->
 
-## Tip of the day [Friday, October 30, 2026]
+## Tip of the day [Saturday, October 31, 2026]
 
-### Prefer hub-and-spoke over mesh
+### Design for fast, automated horizontal scaling
 
-When planning network topology, favor a hub-and-spoke model instead of building many-to-many connections between every VPC and environment. A hub such as AWS Transit Gateway makes it easier to centralize routing, control which networks can talk to each other, and avoid accidental east-west reachability. Design route tables so only the required paths exist, and omit routes between workloads that should remain isolated. As part of the plan, verify that connected networks use non-overlapping CIDR ranges and size subnets with future growth and Availability Zone expansion in mind. If you need segmentation for compliance or different trust levels, use separate VPCs and subnets rather than relying on an overly complex mesh.
+Treat horizontal scaling as a built-in behavior, not an emergency action. Keep application nodes stateless where possible so new instances or containers can be added without migration work or session surprises. Use load balancing to spread requests across targets, and pair it with autoscaling policies that react to demand rather than manual intervention. Choose a scaling signal that reflects real user load, such as request latency, throughput, or CPU, and test both scale-out and scale-in behavior under load. Also make sure your system can shrink back down after spikes so you do not pay for unused capacity. If your workload has predictable patterns, combine demand-based scaling with scheduled or predictive policies to stay ahead of growth.
 
-**Why it matters:** Hub-and-spoke topologies reduce operational complexity and make connectivity policy easier to audit and change safely. They also help prevent IP conflicts and future rework as your environment grows across VPCs, on-premises links, and multiple Availability Zones.
+**Why it matters:** Horizontal scaling only helps if the workload can expand and contract cleanly. Automated scale-out protects performance during traffic spikes, while scale-in avoids overprovisioning and unnecessary cost.
 
 <!-- TIP_OF_THE_DAY_END -->
 
