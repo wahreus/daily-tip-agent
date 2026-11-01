@@ -6,13 +6,13 @@ The project uses Retrieval-Augmented Generation (RAG) over a committed SQLite ve
 
 <!-- TIP_OF_THE_DAY_START -->
 
-## Tip of the day [Saturday, October 31, 2026]
+## Tip of the day [Sunday, November 1, 2026]
 
-### Design for fast, automated horizontal scaling
+### Make cost visibility part of your operating model
 
-Treat horizontal scaling as a built-in behavior, not an emergency action. Keep application nodes stateless where possible so new instances or containers can be added without migration work or session surprises. Use load balancing to spread requests across targets, and pair it with autoscaling policies that react to demand rather than manual intervention. Choose a scaling signal that reflects real user load, such as request latency, throughput, or CPU, and test both scale-out and scale-in behavior under load. Also make sure your system can shrink back down after spikes so you do not pay for unused capacity. If your workload has predictable patterns, combine demand-based scaling with scheduled or predictive policies to stay ahead of growth.
+Start by defining the business categories you want to charge or report against, such as team, project, or environment. Then enforce consistent resource tagging so cost and usage data can be grouped reliably across accounts and workloads. Pair those tags with AWS Budgets, Cost Explorer, and Cost and Usage Reports so teams can review spend trends, receive alerts, and spot unexpected usage early. For shared services, use cost allocation methods based on workload metrics or business outcomes instead of leaving costs unattributed. Review the data on a regular cadence with both engineering and finance so you can act on negative trends before they become budget problems.
 
-**Why it matters:** Horizontal scaling only helps if the workload can expand and contract cleanly. Automated scale-out protects performance during traffic spikes, while scale-in avoids overprovisioning and unnecessary cost.
+**Why it matters:** Good cost and usage visibility turns cloud spend into something teams can actually manage. It improves accountability, supports chargeback or showback, and helps you make faster decisions about right-sizing, shared infrastructure, and optimization priorities.
 
 <!-- TIP_OF_THE_DAY_END -->
 
