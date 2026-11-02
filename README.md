@@ -6,13 +6,13 @@ The project uses Retrieval-Augmented Generation (RAG) over a committed SQLite ve
 
 <!-- TIP_OF_THE_DAY_START -->
 
-## Tip of the day [Sunday, November 1, 2026]
+## Tip of the day [Mon, November 2, 2026]
 
-### Make cost visibility part of your operating model
+### Treat changes as a tested, automated release process
 
-Start by defining the business categories you want to charge or report against, such as team, project, or environment. Then enforce consistent resource tagging so cost and usage data can be grouped reliably across accounts and workloads. Pair those tags with AWS Budgets, Cost Explorer, and Cost and Usage Reports so teams can review spend trends, receive alerts, and spot unexpected usage early. For shared services, use cost allocation methods based on workload metrics or business outcomes instead of leaving costs unattributed. Review the data on a regular cadence with both engineering and finance so you can act on negative trends before they become budget problems.
+For change management, keep application, infrastructure, patching, and configuration updates in the same controlled pipeline, but make each change independently testable and reversible. Test release procedures in pre-production using the same steps, security controls, and deployment configuration you will use in production, so issues surface before they affect customers. Automate deployments and regression checks to reduce human error and to verify that your plan is complete before production. Include monitoring and health checks in the release flow so you can confirm whether a rollback is actually needed and whether it has already occurred. Avoid manual emergency steps that bypass your process, because they increase risk and make outcomes harder to predict. Where possible, use infrastructure as code and automated rollback to keep changes repeatable and recoverable.
 
-**Why it matters:** Good cost and usage visibility turns cloud spend into something teams can actually manage. It improves accountability, supports chargeback or showback, and helps you make faster decisions about right-sizing, shared infrastructure, and optimization priorities.
+**Why it matters:** A disciplined, automated change process reduces the chance that one bad update forces a broad rollback of unrelated work. It also improves confidence in production releases by making failures visible early and recovery faster and more reliable.
 
 <!-- TIP_OF_THE_DAY_END -->
 
