@@ -6,13 +6,13 @@ The project uses Retrieval-Augmented Generation (RAG) over a committed SQLite ve
 
 <!-- TIP_OF_THE_DAY_START -->
 
-## Tip of the day [Mon, November 2, 2026]
+## Tip of the day [Tue, November 3, 2026]
 
-### Treat changes as a tested, automated release process
+### Ship Smaller, Revert Faster
 
-For change management, keep application, infrastructure, patching, and configuration updates in the same controlled pipeline, but make each change independently testable and reversible. Test release procedures in pre-production using the same steps, security controls, and deployment configuration you will use in production, so issues surface before they affect customers. Automate deployments and regression checks to reduce human error and to verify that your plan is complete before production. Include monitoring and health checks in the release flow so you can confirm whether a rollback is actually needed and whether it has already occurred. Avoid manual emergency steps that bypass your process, because they increase risk and make outcomes harder to predict. Where possible, use infrastructure as code and automated rollback to keep changes repeatable and recoverable.
+Break production changes into small, well-scoped releases so each deployment is easy to validate and easy to undo. Use safe rollout patterns like canary, rolling, blue/green, or feature flags to limit the blast radius if something goes wrong. Before you deploy, document a rollback or fix-forward path and make sure it is tested, not just written down. Smaller changes also reduce the chance that one defect affects multiple components at once. If a change fails, you should be able to restore the previous working state quickly without impacting the whole system. Build your CI/CD process so reversible change is the default, not the exception.
 
-**Why it matters:** A disciplined, automated change process reduces the chance that one bad update forces a broad rollback of unrelated work. It also improves confidence in production releases by making failures visible early and recovery faster and more reliable.
+**Why it matters:** Small reversible changes reduce downtime, shorten recovery time, and keep failures from spreading across production. They also make deployments safer and more frequent because teams can respond quickly when a change behaves unexpectedly.
 
 <!-- TIP_OF_THE_DAY_END -->
 
