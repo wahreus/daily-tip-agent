@@ -6,13 +6,13 @@ The project uses Retrieval-Augmented Generation (RAG) over a committed SQLite ve
 
 <!-- TIP_OF_THE_DAY_START -->
 
-## Tip of the day [Wednesday, November 4, 2026]
+## Tip of the day [Thursday, November 5, 2026]
 
-### Pick the region that balances carbon, compliance, and latency
+### Make performance reviews routine, not reactive
 
-When choosing an AWS Region, treat sustainability as one of the core decision factors alongside business requirements like compliance, latency, available services, and cost. Start by shortlisting Regions that meet your data sovereignty and feature needs, then compare their sustainability fit rather than defaulting to the nearest or cheapest option. If you track emissions, align the Region choice with the carbon accounting method your organization uses so your reporting stays consistent year over year. For global workloads, consider whether placing resources closer to users can reduce latency and unnecessary data movement while still meeting sustainability goals. This approach helps you avoid optimizing one KPI at the expense of another.
+Set a fixed cadence to review workload performance, reliability, and cost metrics, and keep the review aligned to the business impact of the system. Use dashboards and anomaly detection to spot spikes, drops, and trends before they become incidents, then turn findings into prioritized backlog items. Include people from operations, development, and business teams so the review captures both technical symptoms and user-facing impact. Compare current behavior against baselines and recent changes to separate normal variation from real regressions. If the workload is expensive or complex, review it more often and adjust the cadence as the system or business changes.
 
-**Why it matters:** Region choice directly affects performance, cost, and carbon footprint, so it has an outsized impact on the sustainability profile of a workload. Making the decision explicitly and consistently helps teams reduce emissions without creating compliance or user-experience tradeoffs.
+**Why it matters:** Regular reviews help you catch issues early, make better decisions with data, and continuously improve the workload instead of waiting for outages or budget surprises. They also create shared ownership across teams, which makes remediation faster and more effective.
 
 <!-- TIP_OF_THE_DAY_END -->
 
