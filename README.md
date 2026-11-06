@@ -6,13 +6,13 @@ The project uses Retrieval-Augmented Generation (RAG) over a committed SQLite ve
 
 <!-- TIP_OF_THE_DAY_START -->
 
-## Tip of the day [Thursday, November 5, 2026]
+## Tip of the day [Friday, November 6, 2026]
 
-### Make performance reviews routine, not reactive
+### Test recovery against your real RTO and RPO
 
-Set a fixed cadence to review workload performance, reliability, and cost metrics, and keep the review aligned to the business impact of the system. Use dashboards and anomaly detection to spot spikes, drops, and trends before they become incidents, then turn findings into prioritized backlog items. Include people from operations, development, and business teams so the review captures both technical symptoms and user-facing impact. Compare current behavior against baselines and recent changes to separate normal variation from real regressions. If the workload is expensive or complex, review it more often and adjust the cadence as the system or business changes.
+Define the workload’s RTO and RPO first, then run recovery tests that prove your backup and failover process can actually meet those targets. Don’t stop at confirming that backups exist; perform a restore and validate that the recovered system is usable, data is intact, and the elapsed recovery time stays within the agreed objective. If your workload uses a disaster recovery strategy such as backup and restore, pilot light, or warm standby, test the exact runbook you would use in an incident. Automate as much of the recovery workflow as possible so you can repeat the test consistently and reduce human error. Revisit the test results whenever the workload changes, because a strategy that met objectives last quarter may no longer do so today.
 
-**Why it matters:** Regular reviews help you catch issues early, make better decisions with data, and continuously improve the workload instead of waiting for outages or budget surprises. They also create shared ownership across teams, which makes remediation faster and more effective.
+**Why it matters:** Recovery objectives are only useful if they are achievable in practice. Regular testing exposes gaps in backup integrity, data consistency, and restore timing before a real outage forces you to discover them.
 
 <!-- TIP_OF_THE_DAY_END -->
 
