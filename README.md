@@ -6,13 +6,13 @@ The project uses Retrieval-Augmented Generation (RAG) over a committed SQLite ve
 
 <!-- TIP_OF_THE_DAY_START -->
 
-## Tip of the day [Friday, November 6, 2026]
+## Tip of the day [Saturday, November 7, 2026]
 
-### Test recovery against your real RTO and RPO
+### Minimize data movement at the source
 
-Define the workload’s RTO and RPO first, then run recovery tests that prove your backup and failover process can actually meet those targets. Don’t stop at confirming that backups exist; perform a restore and validate that the recovered system is usable, data is intact, and the elapsed recovery time stays within the agreed objective. If your workload uses a disaster recovery strategy such as backup and restore, pilot light, or warm standby, test the exact runbook you would use in an incident. Automate as much of the recovery workflow as possible so you can repeat the test consistently and reduce human error. Revisit the test results whenever the workload changes, because a strategy that met objectives last quarter may no longer do so today.
+Design your workload so shared data is accessed from a common storage layer instead of being copied to multiple places. Prefer object storage or shared file systems for data that many services or users need, and place data closer to where it is consumed. Before moving data across the network, reduce its size and convert it into a more efficient format so you are not paying to transfer unnecessary bytes. If your architecture regularly moves the same data between components, add caching or distribution layers to keep reads local. Also review whether any data transfer can be eliminated through service design, such as processing data in place rather than repeatedly shipping it around.
 
-**Why it matters:** Recovery objectives are only useful if they are achievable in practice. Regular testing exposes gaps in backup integrity, data consistency, and restore timing before a real outage forces you to discover them.
+**Why it matters:** Less data movement reduces network usage, transfer cost, and the operational overhead of synchronizing copies. It can also improve performance by lowering latency and avoiding needless traffic between systems.
 
 <!-- TIP_OF_THE_DAY_END -->
 
