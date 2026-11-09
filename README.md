@@ -6,13 +6,13 @@ The project uses Retrieval-Augmented Generation (RAG) over a committed SQLite ve
 
 <!-- TIP_OF_THE_DAY_START -->
 
-## Tip of the day [Sunday, November 8, 2026]
+## Tip of the day [Monday, November 9, 2026]
 
-### Right-size hardware from workload data, not guesswork
+### Test recovery to prove your RTO and RPO
 
-Start by collecting concrete workload requirements such as CPU cores, memory, storage type and size, and network bandwidth. Use that data to choose the instance family and size that best matches the workload instead of defaulting to a larger general-purpose option. For variable demand, use attribute-based instance selection and Auto Scaling so the fleet can adapt as needs change without overprovisioning. If the workload is stable, review utilization metrics and rightsizing recommendations to find smaller or better-fit instances. For specialized workloads like ML inference, consider purpose-built hardware that is designed for that task rather than forcing the workload onto generic compute. This approach helps you balance performance and cost while reducing wasted capacity.
+Don’t treat backups or failover plans as “done” until you’ve actually recovered data and verified it is usable. Periodically restore backups to a new location and run a real application-level check so you confirm the data is complete, readable, and not corrupted. Measure how long the recovery takes and compare it against your RTO to make sure the workload can be restored in time. Also verify that the amount of data lost during the test stays within the defined RPO for the workload. If the process fails or runs too slowly, use the test to tighten the recovery mechanism before an incident forces you to rely on it.
 
-**Why it matters:** Efficient hardware selection improves both cost efficiency and performance by matching resources to actual demand. It also makes scaling and operations easier because your fleet is sized around measured usage rather than estimates.
+**Why it matters:** Recovery objectives are only meaningful if your implementation can meet them under test conditions. Regular recovery testing reduces the risk of discovering broken backups, inaccessible data, or slow restore paths during an outage.
 
 <!-- TIP_OF_THE_DAY_END -->
 
