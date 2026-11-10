@@ -6,13 +6,13 @@ The project uses Retrieval-Augmented Generation (RAG) over a committed SQLite ve
 
 <!-- TIP_OF_THE_DAY_START -->
 
-## Tip of the day [Monday, November 9, 2026]
+## Tip of the day [Tue, November 10, 2026]
 
-### Test recovery to prove your RTO and RPO
+### Standardize cost allocation tags and enforce them early
 
-Don’t treat backups or failover plans as “done” until you’ve actually recovered data and verified it is usable. Periodically restore backups to a new location and run a real application-level check so you confirm the data is complete, readable, and not corrupted. Measure how long the recovery takes and compare it against your RTO to make sure the workload can be restored in time. Also verify that the amount of data lost during the test stays within the defined RPO for the workload. If the process fails or runs too slowly, use the test to tighten the recovery mechanism before an incident forces you to rely on it.
+Define a small, organization-wide set of cost attribution tags such as `CostCenter`, `Project`, `Environment`, and `Owner`, and make sure the key names and allowed values are consistent across accounts. Apply those tags to all billable resources so your cost and usage data can be grouped by business unit, application, or workload. Use AWS Organizations tag policies or similar controls to prevent nonstandard keys and values from creeping in over time. Automate tagging in your provisioning workflows so new resources are tagged at creation instead of being fixed later. Where tagging is not enough, map the same business structure into AWS Cost Categories to improve reporting and chargeback.
 
-**Why it matters:** Recovery objectives are only meaningful if your implementation can meet them under test conditions. Regular recovery testing reduces the risk of discovering broken backups, inaccessible data, or slow restore paths during an outage.
+**Why it matters:** Consistent cost allocation tags make spend visible to the teams that create it, which improves accountability and helps uncover waste faster. They also make budgeting, forecasting, and internal chargeback more accurate because costs can be attributed to the right workload or owner instead of landing in a generic bucket.
 
 <!-- TIP_OF_THE_DAY_END -->
 
