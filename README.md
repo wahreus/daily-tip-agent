@@ -6,13 +6,13 @@ The project uses Retrieval-Augmented Generation (RAG) over a committed SQLite ve
 
 <!-- TIP_OF_THE_DAY_START -->
 
-## Tip of the day [Tue, November 10, 2026]
+## Tip of the day [Wednesday, November 11, 2026]
 
-### Standardize cost allocation tags and enforce them early
+### Centralize security logs in a dedicated archive
 
-Define a small, organization-wide set of cost attribution tags such as `CostCenter`, `Project`, `Environment`, and `Owner`, and make sure the key names and allowed values are consistent across accounts. Apply those tags to all billable resources so your cost and usage data can be grouped by business unit, application, or workload. Use AWS Organizations tag policies or similar controls to prevent nonstandard keys and values from creeping in over time. Automate tagging in your provisioning workflows so new resources are tagged at creation instead of being fixed later. Where tagging is not enough, map the same business structure into AWS Cost Categories to improve reporting and chargeback.
+Send security-relevant logs from workloads and AWS services into a standardized, separate log archive account instead of leaving them scattered across individual teams or accounts. Include sources such as CloudTrail, AWS WAF, Elastic Load Balancing, Route 53, and other service logs that help reconstruct security events. Centralizing them gives your security team one place to correlate activity, run investigations, and feed SIEM or analytics tools. Use cross-account permissions so the archive is readable for analysis but harder to tamper with if a workload account is compromised. Make sure you also define retention and lifecycle settings so the archive supports both incident response and compliance needs.
 
-**Why it matters:** Consistent cost allocation tags make spend visible to the teams that create it, which improves accountability and helps uncover waste faster. They also make budgeting, forecasting, and internal chargeback more accurate because costs can be attributed to the right workload or owner instead of landing in a generic bucket.
+**Why it matters:** A centralized logging pattern reduces blind spots and makes it much easier to detect anomalous activity across distributed systems. It also improves resilience against log tampering and shortens the time needed to perform root-cause analysis during an incident.
 
 <!-- TIP_OF_THE_DAY_END -->
 
