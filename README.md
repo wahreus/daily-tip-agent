@@ -6,13 +6,13 @@ The project uses Retrieval-Augmented Generation (RAG) over a committed SQLite ve
 
 <!-- TIP_OF_THE_DAY_START -->
 
-## Tip of the day [Thursday, November 12, 2026]
+## Tip of the day [Friday, November 13, 2026]
 
-### Set budget alerts for both actual and forecasted spend
+### Use AWS accounts as your primary isolation boundary
 
-Create AWS Budgets with daily granularity so you can catch overspend early instead of waiting until month-end. Set thresholds for both actual costs and forecasted costs; actual alerts tell you when you have already crossed a line, while forecasted alerts give you time to react before the budget is exceeded. Route notifications to a shared email list or SNS topic rather than a single person so the right team always sees the alert. For better coverage, define separate budgets for accounts, workloads, Regions, or services using tags and cost categories. If a budget breach should trigger action, use Budget Actions to enforce controls automatically or with approval.
+Design your AWS environment so production, development, test, and unrelated workloads live in separate accounts. Use AWS Organizations to group accounts into OUs that reflect your business, data sensitivity, and workload structure, then apply guardrails and service control policies at the OU level. Keep the management account for organization-level administration only, and place all workload resources in member accounts. A landing zone with pre-approved baselines helps you create new accounts consistently and safely as your organization grows. This structure makes it easier to enforce access rules, billing separation, and centralized governance without creating a tangle of exceptions.
 
-**Why it matters:** Budget alerts turn cloud spend into an operational signal, not a surprise. They help DevOps teams respond quickly to waste, prevent recurring overruns, and keep costs aligned with workload growth and business expectations.
+**Why it matters:** Account-level separation reduces the blast radius if something is misconfigured or compromised. It also simplifies governance by letting you apply controls once at the OU level instead of managing them workload by workload.
 
 <!-- TIP_OF_THE_DAY_END -->
 
