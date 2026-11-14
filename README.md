@@ -6,13 +6,13 @@ The project uses Retrieval-Augmented Generation (RAG) over a committed SQLite ve
 
 <!-- TIP_OF_THE_DAY_START -->
 
-## Tip of the day [Friday, November 13, 2026]
+## Tip of the day [Saturday, November 14, 2026]
 
-### Use AWS accounts as your primary isolation boundary
+### Make cost optimization a recurring operating habit
 
-Design your AWS environment so production, development, test, and unrelated workloads live in separate accounts. Use AWS Organizations to group accounts into OUs that reflect your business, data sensitivity, and workload structure, then apply guardrails and service control policies at the OU level. Keep the management account for organization-level administration only, and place all workload resources in member accounts. A landing zone with pre-approved baselines helps you create new accounts consistently and safely as your organization grows. This structure makes it easier to enforce access rules, billing separation, and centralized governance without creating a tangle of exceptions.
+Treat cost optimization as an ongoing review cycle, not a one-time cleanup. Set a regular cadence to review spend, usage trends, and budget variance alongside your normal operational reporting. Use cost and usage reports with the right level of granularity so you can spot drift, identify inefficient resources, and catch negative trends early. Tag workloads and accounts consistently so you can track costs by owner, service, or business unit over time. Pair those reviews with alerts from budgets so teams can respond quickly when spend moves outside expected bounds.
 
-**Why it matters:** Account-level separation reduces the blast radius if something is misconfigured or compromised. It also simplifies governance by letting you apply controls once at the OU level instead of managing them workload by workload.
+**Why it matters:** Costs usually creep up gradually as workloads change, new resources are added, and old ones are left behind. A repeatable review process helps teams stay ahead of waste and continuously improve the cost efficiency of the workload.
 
 <!-- TIP_OF_THE_DAY_END -->
 
