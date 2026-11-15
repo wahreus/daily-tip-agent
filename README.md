@@ -6,13 +6,13 @@ The project uses Retrieval-Augmented Generation (RAG) over a committed SQLite ve
 
 <!-- TIP_OF_THE_DAY_START -->
 
-## Tip of the day [Saturday, November 14, 2026]
+## Tip of the day [Sunday, November 15, 2026]
 
-### Make cost optimization a recurring operating habit
+### Make improvement a standing operational ritual
 
-Treat cost optimization as an ongoing review cycle, not a one-time cleanup. Set a regular cadence to review spend, usage trends, and budget variance alongside your normal operational reporting. Use cost and usage reports with the right level of granularity so you can spot drift, identify inefficient resources, and catch negative trends early. Tag workloads and accounts consistently so you can track costs by owner, service, or business unit over time. Pair those reviews with alerts from budgets so teams can respond quickly when spend moves outside expected bounds.
+Set a recurring cadence to review operations metrics with people from engineering, operations, and the business. Use those sessions to look for anomalies, confirm whether recent changes actually improved outcomes, and decide what to tackle next across dev, test, and production. Pair the metric review with post-incident analysis so you can turn customer-impacting events into specific corrective actions, not just notes. Keep the feedback loop tight by validating findings with stakeholders and updating runbooks, dashboards, or automation based on what you learn. Over time, this turns operational improvement into a routine process instead of an occasional cleanup exercise.
 
-**Why it matters:** Costs usually creep up gradually as workloads change, new resources are added, and old ones are left behind. A repeatable review process helps teams stay ahead of waste and continuously improve the cost efficiency of the workload.
+**Why it matters:** Continuous operational improvement works best when it is data-driven and shared across teams. Regular review cycles help you spot recurring issues early, prioritize the highest-value fixes, and reinforce changes that measurably improve service health and business outcomes.
 
 <!-- TIP_OF_THE_DAY_END -->
 
