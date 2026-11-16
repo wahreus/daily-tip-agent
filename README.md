@@ -6,13 +6,13 @@ The project uses Retrieval-Augmented Generation (RAG) over a committed SQLite ve
 
 <!-- TIP_OF_THE_DAY_START -->
 
-## Tip of the day [Sunday, November 15, 2026]
+## Tip of the day [Monday, November 16, 2026]
 
-### Make improvement a standing operational ritual
+### Make cost optimization a recurring operating habit
 
-Set a recurring cadence to review operations metrics with people from engineering, operations, and the business. Use those sessions to look for anomalies, confirm whether recent changes actually improved outcomes, and decide what to tackle next across dev, test, and production. Pair the metric review with post-incident analysis so you can turn customer-impacting events into specific corrective actions, not just notes. Keep the feedback loop tight by validating findings with stakeholders and updating runbooks, dashboards, or automation based on what you learn. Over time, this turns operational improvement into a routine process instead of an occasional cleanup exercise.
+Treat cost optimization as an ongoing process, not a one-time cleanup. Review usage and spend regularly with AWS Cost Explorer and AWS Budgets so you can spot idle, underutilized, or unexpectedly growing resources early. Build a cadence for reporting on cost performance, such as weekly or monthly reviews, and track progress against budgets and alerts. Use recurring reports to surface rightsizing recommendations plus Savings Plans and Reserved Instances opportunities, then apply commitments in small batches and re-evaluate after a month or two. For workloads with predictable downtime, stop compute resources after hours or pause them when possible so you only pay for storage while they are idle.  
 
-**Why it matters:** Continuous operational improvement works best when it is data-driven and shared across teams. Regular review cycles help you spot recurring issues early, prioritize the highest-value fixes, and reinforce changes that measurably improve service health and business outcomes.
+**Why it matters:** Costs drift over time as workloads, teams, and usage patterns change. A regular review cycle helps you catch waste quickly, keep unit costs down, and make better purchasing decisions as your steady-state usage becomes clearer.
 
 <!-- TIP_OF_THE_DAY_END -->
 
