@@ -6,13 +6,13 @@ The project uses Retrieval-Augmented Generation (RAG) over a committed SQLite ve
 
 <!-- TIP_OF_THE_DAY_START -->
 
-## Tip of the day [Monday, November 16, 2026]
+## Tip of the day [Tuesday, November 17, 2026]
 
-### Make cost optimization a recurring operating habit
+### Pick the region that meets both business and sustainability goals
 
-Treat cost optimization as an ongoing process, not a one-time cleanup. Review usage and spend regularly with AWS Cost Explorer and AWS Budgets so you can spot idle, underutilized, or unexpectedly growing resources early. Build a cadence for reporting on cost performance, such as weekly or monthly reviews, and track progress against budgets and alerts. Use recurring reports to surface rightsizing recommendations plus Savings Plans and Reserved Instances opportunities, then apply commitments in small batches and re-evaluate after a month or two. For workloads with predictable downtime, stop compute resources after hours or pause them when possible so you only pay for storage while they are idle.  
+When selecting an AWS Region, treat sustainability as a first-class requirement alongside compliance, latency, available services, and cost. Start by shortlisting regions that satisfy your data sovereignty and feature needs, then compare how each option affects performance, cost, and carbon footprint. Use AWS Regional Services Lists to verify that the services you depend on are available in the candidate regions. If your workload has clear user or network locality, prefer the region that reduces travel distance and network resource use rather than defaulting to the region closest to your team. For reporting and target-setting, align your region choice with the emissions method you use so your sustainability measurements stay consistent over time.
 
-**Why it matters:** Costs drift over time as workloads, teams, and usage patterns change. A regular review cycle helps you catch waste quickly, keep unit costs down, and make better purchasing decisions as your steady-state usage becomes clearer.
+**Why it matters:** Region choice directly influences both operational efficiency and environmental impact. Choosing deliberately can lower latency and cost while also helping reduce carbon emissions, instead of optimizing one KPI at the expense of the others.
 
 <!-- TIP_OF_THE_DAY_END -->
 
