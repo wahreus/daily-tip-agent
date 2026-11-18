@@ -6,13 +6,13 @@ The project uses Retrieval-Augmented Generation (RAG) over a committed SQLite ve
 
 <!-- TIP_OF_THE_DAY_START -->
 
-## Tip of the day [Tuesday, November 17, 2026]
+## Tip of the day [Wednesday, November 18, 2026]
 
-### Pick the region that meets both business and sustainability goals
+### Map keys to data and monitor their use
 
-When selecting an AWS Region, treat sustainability as a first-class requirement alongside compliance, latency, available services, and cost. Start by shortlisting regions that satisfy your data sovereignty and feature needs, then compare how each option affects performance, cost, and carbon footprint. Use AWS Regional Services Lists to verify that the services you depend on are available in the candidate regions. If your workload has clear user or network locality, prefer the region that reduces travel distance and network resource use rather than defaulting to the region closest to your team. For reporting and target-setting, align your region choice with the emissions method you use so your sustainability measurements stay consistent over time.
+Treat key management as part of your data-classification strategy, not just an encryption checkbox. Use customer managed keys where you need tighter control, and keep the key in the same account as the workload when you can to simplify ownership and access control. Avoid reusing one key for every dataset; instead, map keys to the sensitivity or purpose of the data so permissions stay narrowly scoped. Review KMS key policies and grants carefully, because they are the primary controls that determine who can decrypt data or let AWS services do it on your behalf. Turn on CloudTrail-based monitoring and watch for unusual key use, especially key deletion requests or broad policy changes. If your environment allows it, use IAM Access Analyzer or Security Hub findings to catch overly permissive key policies and missing rotation.
 
-**Why it matters:** Region choice directly influences both operational efficiency and environmental impact. Choosing deliberately can lower latency and cost while also helping reduce carbon emissions, instead of optimizing one KPI at the expense of the others.
+**Why it matters:** Strong key management reduces the blast radius of compromised credentials and prevents accidental or malicious data exposure. Monitoring and policy reviews also help you detect misconfigurations early, before they become data-loss events.
 
 <!-- TIP_OF_THE_DAY_END -->
 
