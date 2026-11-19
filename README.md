@@ -6,13 +6,13 @@ The project uses Retrieval-Augmented Generation (RAG) over a committed SQLite ve
 
 <!-- TIP_OF_THE_DAY_START -->
 
-## Tip of the day [Wednesday, November 18, 2026]
+## Tip of the day [Thu, November 19, 2026]
 
-### Map keys to data and monitor their use
+### Automate the cleanup of idle cloud resources
 
-Treat key management as part of your data-classification strategy, not just an encryption checkbox. Use customer managed keys where you need tighter control, and keep the key in the same account as the workload when you can to simplify ownership and access control. Avoid reusing one key for every dataset; instead, map keys to the sensitivity or purpose of the data so permissions stay narrowly scoped. Review KMS key policies and grants carefully, because they are the primary controls that determine who can decrypt data or let AWS services do it on your behalf. Turn on CloudTrail-based monitoring and watch for unusual key use, especially key deletion requests or broad policy changes. If your environment allows it, use IAM Access Analyzer or Security Hub findings to catch overly permissive key policies and missing rotation.
+Make unused-resource cleanup a recurring operational task, not a one-time audit. Start by checking utilization data and rightsizing recommendations to find idle or underused components, especially in stable workloads. Then retire resources that are no longer needed, including EBS volumes, snapshots, Elastic IPs, AMIs, and stale Auto Scaling or Elastic Beanstalk infrastructure. For ephemeral environments, rely on utilization metrics and lifecycle policies to catch waste sooner. Before deleting anything, verify the resource is not still needed by another team or workload, and automate deletions where possible with tools like AWS Config, Systems Manager, or lifecycle rules.
 
-**Why it matters:** Strong key management reduces the blast radius of compromised credentials and prevents accidental or malicious data exposure. Monitoring and policy reviews also help you detect misconfigurations early, before they become data-loss events.
+**Why it matters:** Unused resources quietly drive up cost and can add operational clutter and risk. Regular cleanup keeps your environment lean, improves efficiency, and reduces the chance that forgotten assets become security or compliance issues.
 
 <!-- TIP_OF_THE_DAY_END -->
 
