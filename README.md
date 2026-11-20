@@ -6,13 +6,13 @@ The project uses Retrieval-Augmented Generation (RAG) over a committed SQLite ve
 
 <!-- TIP_OF_THE_DAY_START -->
 
-## Tip of the day [Thu, November 19, 2026]
+## Tip of the day [Friday, November 20, 2026]
 
-### Automate the cleanup of idle cloud resources
+### Document the boundary, not just the control
 
-Make unused-resource cleanup a recurring operational task, not a one-time audit. Start by checking utilization data and rightsizing recommendations to find idle or underused components, especially in stable workloads. Then retire resources that are no longer needed, including EBS volumes, snapshots, Elastic IPs, AMIs, and stale Auto Scaling or Elastic Beanstalk infrastructure. For ephemeral environments, rely on utilization metrics and lifecycle policies to catch waste sooner. Before deleting anything, verify the resource is not still needed by another team or workload, and automate deletions where possible with tools like AWS Config, Systems Manager, or lifecycle rules.
+Treat the shared responsibility model as an operating assumption, not a slide in a security deck. For every workload, explicitly map which security and compliance controls are handled by AWS and which are yours, then fold the customer-owned items into your threat model. Use that mapping to drive concrete guardrails such as IAM policies, SCPs, resource policies, and configuration controls that prevent non-compliant actions. Review the responsibility split again whenever you adopt a new AWS service or change your architecture, since the boundary can shift with service features. Finally, make sure your team knows where ownership lives so incidents and operational tasks are routed quickly to the right people.
 
-**Why it matters:** Unused resources quietly drive up cost and can add operational clutter and risk. Regular cleanup keeps your environment lean, improves efficiency, and reduces the chance that forgotten assets become security or compliance issues.
+**Why it matters:** Clear responsibility boundaries reduce missed controls, duplicate effort, and security gaps during design and operations. They also make it easier to prove compliance because you can show which mitigations are implemented by AWS and which are enforced in your own environment.
 
 <!-- TIP_OF_THE_DAY_END -->
 
