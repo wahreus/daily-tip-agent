@@ -6,13 +6,13 @@ The project uses Retrieval-Augmented Generation (RAG) over a committed SQLite ve
 
 <!-- TIP_OF_THE_DAY_START -->
 
-## Tip of the day [Friday, November 20, 2026]
+## Tip of the day [Sat, November 21, 2026]
 
-### Document the boundary, not just the control
+### Centralize security logs in a dedicated archive account
 
-Treat the shared responsibility model as an operating assumption, not a slide in a security deck. For every workload, explicitly map which security and compliance controls are handled by AWS and which are yours, then fold the customer-owned items into your threat model. Use that mapping to drive concrete guardrails such as IAM policies, SCPs, resource policies, and configuration controls that prevent non-compliant actions. Review the responsibility split again whenever you adopt a new AWS service or change your architecture, since the boundary can shift with service features. Finally, make sure your team knows where ownership lives so incidents and operational tasks are routed quickly to the right people.
+Capture security logs and findings from AWS services and applications into a standardized, separate Log Archive account rather than leaving them spread across workloads. Include sources like CloudTrail, WAF, Route 53, VPC Flow Logs, and other service logs that are relevant to security analysis. This makes it much easier to correlate events, reduces the operational overhead of ETL and scattered permissions, and gives you a single place to integrate SIEM or other analytics tools. Keep the Security Tooling account separate from the Log Archive account so your analysis tools do not share the same blast radius as the data they inspect. If possible, use standardized formats and ingestion paths so the data is ready for querying without extra transformation. Protect the archive with cross-account permissions and controls that make tampering from compromised workloads harder.
 
-**Why it matters:** Clear responsibility boundaries reduce missed controls, duplicate effort, and security gaps during design and operations. They also make it easier to prove compliance because you can show which mitigations are implemented by AWS and which are enforced in your own environment.
+**Why it matters:** Centralized logging improves incident detection because security teams can analyze one consistent data set instead of chasing logs across many accounts and services. It also strengthens resilience and auditability by making log tampering more difficult and preserving evidence for response and compliance.
 
 <!-- TIP_OF_THE_DAY_END -->
 
