@@ -6,13 +6,13 @@ The project uses Retrieval-Augmented Generation (RAG) over a committed SQLite ve
 
 <!-- TIP_OF_THE_DAY_START -->
 
-## Tip of the day [Sat, November 21, 2026]
+## Tip of the day [Sunday, November 22, 2026]
 
-### Centralize security logs in a dedicated archive account
+### Plan for growth, then isolate what should not talk
 
-Capture security logs and findings from AWS services and applications into a standardized, separate Log Archive account rather than leaving them spread across workloads. Include sources like CloudTrail, WAF, Route 53, VPC Flow Logs, and other service logs that are relevant to security analysis. This makes it much easier to correlate events, reduces the operational overhead of ETL and scattered permissions, and gives you a single place to integrate SIEM or other analytics tools. Keep the Security Tooling account separate from the Log Archive account so your analysis tools do not share the same blast radius as the data they inspect. If possible, use standardized formats and ingestion paths so the data is ready for querying without extra transformation. Protect the archive with cross-account permissions and controls that make tampering from compromised workloads harder.
+When designing network topology, start by sizing your VPC CIDR blocks for both current demand and future expansion, including enough space for subnets across Availability Zones. If you expect uncertain growth, choose larger address ranges up front so you avoid disruptive renumbering later. For multi-VPC environments, verify that connected networks use non-overlapping IP ranges and decide early whether you need a Transit Gateway or another multi-VPC connectivity pattern. Use separate subnets or attachments where it helps keep shared infrastructure tidy, and keep routing tables strict so only the networks that truly need to communicate can do so. If you have regulatory or workload-separation requirements, factor that into the topology before deployment rather than trying to bolt it on later.
 
-**Why it matters:** Centralized logging improves incident detection because security teams can analyze one consistent data set instead of chasing logs across many accounts and services. It also strengthens resilience and auditability by making log tampering more difficult and preserving evidence for response and compliance.
+**Why it matters:** Good topology planning reduces future rework, avoids IP conflicts, and makes it easier to scale without redesigning your network. Tight routing and intentional segmentation also improve fault isolation and help limit unintended east-west access between workloads.
 
 <!-- TIP_OF_THE_DAY_END -->
 
