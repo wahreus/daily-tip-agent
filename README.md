@@ -6,13 +6,13 @@ The project uses Retrieval-Augmented Generation (RAG) over a committed SQLite ve
 
 <!-- TIP_OF_THE_DAY_START -->
 
-## Tip of the day [Sunday, November 22, 2026]
+## Tip of the day [Monday, November 23, 2026]
 
-### Plan for growth, then isolate what should not talk
+### Make changes small, automated, and reversible
 
-When designing network topology, start by sizing your VPC CIDR blocks for both current demand and future expansion, including enough space for subnets across Availability Zones. If you expect uncertain growth, choose larger address ranges up front so you avoid disruptive renumbering later. For multi-VPC environments, verify that connected networks use non-overlapping IP ranges and decide early whether you need a Transit Gateway or another multi-VPC connectivity pattern. Use separate subnets or attachments where it helps keep shared infrastructure tidy, and keep routing tables strict so only the networks that truly need to communicate can do so. If you have regulatory or workload-separation requirements, factor that into the topology before deployment rather than trying to bolt it on later.
+Treat production changes as a first-class release process, not an afterthought. Use infrastructure as code and automated delivery pipelines so updates are repeatable, consistent, and less dependent on manual steps. Prefer frequent, small changes over large batches, because smaller releases are easier to validate, easier to roll back, and less likely to create broad customer impact if something goes wrong. Where possible, add safe rollout patterns such as blue/green, canary, traffic splitting, or feature flags to limit blast radius. Keep configuration and infrastructure definitions in version control so changes are tracked and can be reverted quickly. Also monitor for drift so you can detect when live systems no longer match the approved state.
 
-**Why it matters:** Good topology planning reduces future rework, avoids IP conflicts, and makes it easier to scale without redesigning your network. Tight routing and intentional segmentation also improve fault isolation and help limit unintended east-west access between workloads.
+**Why it matters:** Good change management reduces the risk of failed deployments and shortens recovery time when issues occur. Automation and reversibility help teams ship faster while keeping operational risk under control.
 
 <!-- TIP_OF_THE_DAY_END -->
 
