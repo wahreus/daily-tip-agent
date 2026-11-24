@@ -6,13 +6,13 @@ The project uses Retrieval-Augmented Generation (RAG) over a committed SQLite ve
 
 <!-- TIP_OF_THE_DAY_START -->
 
-## Tip of the day [Monday, November 23, 2026]
+## Tip of the day [Tuesday, November 24, 2026]
 
-### Make changes small, automated, and reversible
+### Classify first, then enforce controls
 
-Treat production changes as a first-class release process, not an afterthought. Use infrastructure as code and automated delivery pipelines so updates are repeatable, consistent, and less dependent on manual steps. Prefer frequent, small changes over large batches, because smaller releases are easier to validate, easier to roll back, and less likely to create broad customer impact if something goes wrong. Where possible, add safe rollout patterns such as blue/green, canary, traffic splitting, or feature flags to limit blast radius. Keep configuration and infrastructure definitions in version control so changes are tracked and can be reverted quickly. Also monitor for drift so you can detect when live systems no longer match the approved state.
+Start with a clear data classification scheme for the information your workloads process, including who owns the data, where it lives, and how sensitive it is. Define handling rules for each class, such as public, internal, confidential, or restricted, and make those rules drive your security controls. Apply resource tags to identify sensitive data and keep tag keys and values standardized through tag policies so teams classify data consistently. Then use automation to detect untagged or misclassified resources and to confirm protections like encryption, access controls, and auditing stay aligned with the data’s sensitivity. For highly sensitive data, separate workloads or accounts to create stronger isolation boundaries and reduce accidental overexposure.
 
-**Why it matters:** Good change management reduces the risk of failed deployments and shortens recovery time when issues occur. Automation and reversibility help teams ship faster while keeping operational risk under control.
+**Why it matters:** Data classification is the foundation for choosing the right protection level instead of applying one-size-fits-all controls. It also helps you enforce least privilege, reduce human error, and spot gaps before sensitive data drifts out of compliance.
 
 <!-- TIP_OF_THE_DAY_END -->
 
