@@ -6,13 +6,13 @@ The project uses Retrieval-Augmented Generation (RAG) over a committed SQLite ve
 
 <!-- TIP_OF_THE_DAY_START -->
 
-## Tip of the day [Tuesday, November 24, 2026]
+## Tip of the day [Wednesday, November 25, 2026]
 
-### Classify first, then enforce controls
+### Put a protective edge in front of your app
 
-Start with a clear data classification scheme for the information your workloads process, including who owns the data, where it lives, and how sensitive it is. Define handling rules for each class, such as public, internal, confidential, or restricted, and make those rules drive your security controls. Apply resource tags to identify sensitive data and keep tag keys and values standardized through tag policies so teams classify data consistently. Then use automation to detect untagged or misclassified resources and to confirm protections like encryption, access controls, and auditing stay aligned with the data’s sensitivity. For highly sensitive data, separate workloads or accounts to create stronger isolation boundaries and reduce accidental overexposure.
+Use Amazon CloudFront as the first public entry point for internet-facing workloads so you can cache content at edge locations and reduce direct load on your origin. Pair it with AWS WAF to block common web exploits and bot-driven HTTP floods before they reach application servers. Keep AWS Shield Standard enabled for baseline DDoS defense, and consider Shield Advanced if your workload is exposed to larger or more sophisticated attacks. Where appropriate, add CloudFront Origin Shield and origin failover so cache misses and origin disruptions are absorbed more gracefully. If you use Global Accelerator, its static IPs and independent network zones can also improve resilience and simplify front-door protection.
 
-**Why it matters:** Data classification is the foundation for choosing the right protection level instead of applying one-size-fits-all controls. It also helps you enforce least privilege, reduce human error, and spot gaps before sensitive data drifts out of compliance.
+**Why it matters:** Pushing filtering and caching closer to the user reduces attack surface and makes it harder for volumetric or application-layer attacks to consume your origin capacity. It also improves availability by giving you multiple layers of edge resilience instead of relying on a single ingress path.
 
 <!-- TIP_OF_THE_DAY_END -->
 
