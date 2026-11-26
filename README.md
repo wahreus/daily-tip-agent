@@ -6,13 +6,13 @@ The project uses Retrieval-Augmented Generation (RAG) over a committed SQLite ve
 
 <!-- TIP_OF_THE_DAY_START -->
 
-## Tip of the day [Wednesday, November 25, 2026]
+## Tip of the day [Thursday, November 26, 2026]
 
-### Put a protective edge in front of your app
+### Centralize security logs in a protected archive
 
-Use Amazon CloudFront as the first public entry point for internet-facing workloads so you can cache content at edge locations and reduce direct load on your origin. Pair it with AWS WAF to block common web exploits and bot-driven HTTP floods before they reach application servers. Keep AWS Shield Standard enabled for baseline DDoS defense, and consider Shield Advanced if your workload is exposed to larger or more sophisticated attacks. Where appropriate, add CloudFront Origin Shield and origin failover so cache misses and origin disruptions are absorbed more gracefully. If you use Global Accelerator, its static IPs and independent network zones can also improve resilience and simplify front-door protection.
+Capture security-related logs and findings in standardized locations instead of leaving each workload to manage its own copy. A strong pattern is to aggregate sources like CloudTrail, WAF, load balancer logs, Route 53 logs, and other security signals into a dedicated log archive or security tooling account. This reduces the risk of log tampering if a workload is compromised and gives you a single place to integrate SIEM or detection tools. Keep access tightly controlled with cross-account permissions so teams can analyze data without letting workloads alter it. For services with long retention needs, choose storage and lifecycle settings that match your investigation and compliance requirements. If you are using a newer centralized option like Security Lake, include it in your standard collection strategy and make sure it covers the regions and sources you actually use.
 
-**Why it matters:** Pushing filtering and caching closer to the user reduces attack surface and makes it harder for volumetric or application-layer attacks to consume your origin capacity. It also improves availability by giving you multiple layers of edge resilience instead of relying on a single ingress path.
+**Why it matters:** Centralized logging makes correlation, investigation, and alerting much faster because analysts are working from one normalized data set. It also improves resilience against attackers who might try to delete or modify logs in the affected environment.
 
 <!-- TIP_OF_THE_DAY_END -->
 
