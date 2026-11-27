@@ -6,13 +6,13 @@ The project uses Retrieval-Augmented Generation (RAG) over a committed SQLite ve
 
 <!-- TIP_OF_THE_DAY_START -->
 
-## Tip of the day [Thursday, November 26, 2026]
+## Tip of the day [Friday, November 27, 2026]
 
-### Centralize security logs in a protected archive
+### Build recovery to be automated, observable, and stoppable
 
-Capture security-related logs and findings in standardized locations instead of leaving each workload to manage its own copy. A strong pattern is to aggregate sources like CloudTrail, WAF, load balancer logs, Route 53 logs, and other security signals into a dedicated log archive or security tooling account. This reduces the risk of log tampering if a workload is compromised and gives you a single place to integrate SIEM or detection tools. Keep access tightly controlled with cross-account permissions so teams can analyze data without letting workloads alter it. For services with long retention needs, choose storage and lifecycle settings that match your investigation and compliance requirements. If you are using a newer centralized option like Security Lake, include it in your standard collection strategy and make sure it covers the regions and sources you actually use.
+Design recovery so it can repair common failures without human intervention, but keep it standardized and tested so it behaves predictably during an incident. Use infrastructure as code for the recovery environment and orchestration tools like AWS Systems Manager Automation or AWS Step Functions to coordinate multi-step failover or repair workflows. Make sure your automation is observable while it runs, so you can confirm it is making the situation better rather than worse. Just as important, include a fast way to halt the automation if it starts to create additional downtime or data loss. Test recovery paths regularly against your real RTO and RPO targets so you know they work before you need them.
 
-**Why it matters:** Centralized logging makes correlation, investigation, and alerting much faster because analysts are working from one normalized data set. It also improves resilience against attackers who might try to delete or modify logs in the affected environment.
+**Why it matters:** Automated recovery reduces the business impact of failures by shortening response time and eliminating manual, error-prone steps. Observability and a stop mechanism help prevent recovery automation from turning a bad incident into a worse one.
 
 <!-- TIP_OF_THE_DAY_END -->
 
