@@ -6,13 +6,13 @@ The project uses Retrieval-Augmented Generation (RAG) over a committed SQLite ve
 
 <!-- TIP_OF_THE_DAY_START -->
 
-## Tip of the day [Friday, November 27, 2026]
+## Tip of the day [Saturday, November 28, 2026]
 
-### Build recovery to be automated, observable, and stoppable
+### Turn incidents into shared improvements
 
-Design recovery so it can repair common failures without human intervention, but keep it standardized and tested so it behaves predictably during an incident. Use infrastructure as code for the recovery environment and orchestration tools like AWS Systems Manager Automation or AWS Step Functions to coordinate multi-step failover or repair workflows. Make sure your automation is observable while it runs, so you can confirm it is making the situation better rather than worse. Just as important, include a fast way to halt the automation if it starts to create additional downtime or data loss. Test recovery paths regularly against your real RTO and RPO targets so you know they work before you need them.
+Make post-incident analysis a standard part of your operations, and treat near-misses the same way you treat outages. Capture the incident timeline, logs, communications, contributing factors, and the actions taken so you can see what actually happened, not just what was suspected. Focus on root cause and prevention rather than blame, and look for process gaps, missing guardrails, or tests that failed to catch the issue. After each review, convert the findings into concrete follow-up work such as runbook updates, new alerts, automation, or pre-deployment checks. Share the lessons learned across teams so the same failure mode is less likely to repeat elsewhere. Over time, these reviews become a feedback loop that steadily improves operational resilience.
 
-**Why it matters:** Automated recovery reduces the business impact of failures by shortening response time and eliminating manual, error-prone steps. Observability and a stop mechanism help prevent recovery automation from turning a bad incident into a worse one.
+**Why it matters:** Learning from failures is how you reduce repeat incidents and improve response quality. A blameless, structured review process helps teams identify systemic fixes, not just human error, and turns operational pain into lasting reliability gains.
 
 <!-- TIP_OF_THE_DAY_END -->
 
